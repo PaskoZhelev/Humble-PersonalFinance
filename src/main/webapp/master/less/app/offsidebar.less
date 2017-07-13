@@ -1,0 +1,68 @@
+/* ========================================================================
+   Component: offsidebar.less
+ ========================================================================== */
+ 
+//
+// A sidebar in offcanvas mode
+// Open status toggled via JS
+// -----------------------------------------
+
+@offsidebar-bg:           @sidebar-bg;    // reuse the main sidebar background
+@offsidebar-wd:           @aside-wd;      // match the width with the main aside component
+
+.offsidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: @offsidebar-wd;
+  margin-top: @navbar-height * 2;
+  background-color: @offsidebar-bg;
+  z-index: -1; 
+}
+
+// Global open status (attach to body)
+.offsidebar-open  {
+  overflow-y: hidden;
+  .offsidebar {
+    overflow-y: auto;
+    z-index: @z-index-main-section - 1; // Hides behind the main section
+  }
+}
+
+// On desktop
+@media @tablet {
+  .offsidebar {
+    position: fixed;
+    margin-top: @navbar-height;
+  }
+  .offsidebar-open  {
+    overflow-y: auto;
+  }
+}
+
+// No tranformation devices
+.no-csstransforms3d {
+
+  .offsidebar-open {
+    .wrapper > section {
+      left: -@offsidebar-wd;
+    }
+  }
+}
+
+// Transformation ready devices
+.csstransforms3d  {
+  
+  .wrapper > section {
+    .translate3d(0,0,0);
+    .transition(all .3s ease);
+  }
+
+  .offsidebar-open {
+    .wrapper > section  {
+      .translate3d(-@offsidebar-wd, 0, 0);
+      .transition(all .3s ease);
+    }
+  }
+}

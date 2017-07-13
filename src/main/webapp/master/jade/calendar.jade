@@ -1,0 +1,65 @@
+extends layout/main-layout
+
+block active-item
+  - menu['Elements']['active'] = 1
+  - menu['Elements']['S']['Calendar']['active'] = 1
+
+block content
+
+  h3 Full Calendar
+    br
+    small Drag and Drop events and tasks
+  
+  // START row
+  .row
+    .col-md-3
+      // START panel
+      .panel.panel-default
+        .panel-heading
+          h4.panel-title Draggable Events
+        // Default external events list
+        .external-events-trash
+          .panel-body
+            .external-events
+              .bg-green Lunch
+              .bg-danger Go home
+              .bg-info Do homework
+              .bg-warning Work on UI design
+              .bg-inverse Sleep tight
+            p
+              span.checkbox.c-checkbox
+                label
+                  input#remove-after-drop(type='checkbox')
+                  span.fa.fa-check 
+                  | Remove after Drop
+      // END panel
+      // START panel
+      .panel.panel-default
+        .panel-heading
+          h3.panel-title Create Event
+        .panel-body
+          .input-group.mb
+            input.form-control.external-event-name(type='text', placeholder="Event name...")
+            .input-group-btn
+              button.btn.btn-default.external-event-add-btn(type='button') Add
+          p.text-muted: small Choose a Color
+          ul.list-inline.external-event-color-selector
+            li.p0: a.point.point-danger.point-xl.selected(href='#')
+            li.p0: a.point.point-primary.point-xl(href='#')
+            li.p0: a.point.point-info.point-xl(href='#')
+            li.p0: a.point.point-success.point-xl(href='#')
+            li.p0: a.point.point-warning.point-xl(href='#')
+            li.p0: a.point.point-green.point-xl(href='#')
+            li.p0: a.point.point-pink.point-xl(href='#')
+            li.p0: a.point.point-inverse.point-xl(href='#')
+            li.p0: a.point.point-purple.point-xl(href='#')
+      // END panel
+    .col-md-9
+      // START panel
+      .panel
+        .panel-body
+          // START calendar
+          #calendar
+          // END calendar
+      // END panel
+  // END row

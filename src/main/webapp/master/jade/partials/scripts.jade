@@ -1,0 +1,86 @@
+// Main vendor Scripts
+script(src='vendor/jquery/jquery.min.js')
+script(src='vendor/bootstrap/js/bootstrap.min.js')
+
+// Plugins
+script(src='vendor/chosen/chosen.jquery.min.js')
+script(src='vendor/slider/js/bootstrap-slider.js')
+script(src='vendor/filestyle/bootstrap-filestyle.min.js')
+
+// Animo
+script(src='vendor/animo/animo.min.js')
+
+// Sparklines
+script(src='vendor/sparklines/jquery.sparkline.min.js')
+
+// Slimscroll
+script(src='vendor/slimscroll/jquery.slimscroll.min.js')
+
+
+// START Page Custom Script
+
+//- jQuery UI for Portlets and Calendar 
+if (menu['Elements']['S']['Portlets']['active'] || menu['Elements']['S']['Calendar']['active'])
+  // jQuery UI
+  script(src='vendor/jqueryui/js/jquery-ui-1.10.4.custom.min.js')
+  script(src='vendor/touch-punch/jquery.ui.touch-punch.min.js')
+
+if (menu['Elements']['S']['Calendar']['active'])
+  // MomentJs
+  script(src='vendor/moment/min/moment-with-langs.min.js')
+  // FulCalendar
+  script(src='vendor/fullcalendar/fullcalendar.min.js')
+
+if (menu['Forms']['S']['Extended']['active'])
+  // Markdown Area Codemirror and dependencies 
+  script(src='vendor/codemirror/lib/codemirror.js')
+  script(src='vendor/codemirror/addon/mode/overlay.js')
+  script(src='vendor/codemirror/mode/markdown/markdown.js')
+  script(src='vendor/codemirror/mode/xml/xml.js')
+  script(src='vendor/codemirror/mode/gfm/gfm.js')
+  script(src='vendor/marked/marked.js')
+  // MomentJs and Datepicker
+  script(src='vendor/moment/min/moment-with-langs.min.js')
+  script(src='vendor/datetimepicker/js/bootstrap-datetimepicker.min.js')
+  // Tags input
+  script(src='vendor/tagsinput/bootstrap-tagsinput.min.js')
+  // Input Mask
+  script(src='vendor/inputmask/jquery.inputmask.bundle.min.js')
+
+
+if (menu['Tables']['S']['Data Table']['active'])
+  // Data Table Scripts
+  script(src='vendor/datatable/media/js/jquery.dataTables.min.js')
+  script(src='vendor/datatable/extensions/datatable-bootstrap/js/dataTables.bootstrap.js')
+  script(src='vendor/datatable/extensions/datatable-bootstrap/js/dataTables.bootstrapPagination.js')
+  script(src='vendor/datatable/extensions/ColVis/js/dataTables.colVis.min.js')
+    
+
+if (menu['Forms']['S']['Validation']['active'])
+  // Form Validation
+  script(src='vendor/parsley/parsley.min.js')
+
+
+if (menu['Charts']['S']['Flot']['active'] || menu['Dashboard']['active'])
+  //  Flot Charts
+  script(src='vendor/flot/jquery.flot.min.js')
+  script(src='vendor/flot/jquery.flot.tooltip.min.js')
+  script(src='vendor/flot/jquery.flot.resize.min.js')
+  script(src='vendor/flot/jquery.flot.pie.min.js')
+  script(src='vendor/flot/jquery.flot.time.min.js')
+  script(src='vendor/flot/jquery.flot.categories.min.js')
+
+  <!--[if lt IE 8]>
+  script(src='js/excanvas.min.js')
+  <![endif]-->
+
+
+if (menu['Elements']['S']['Widgets']['active'] || menu['Elements']['S']['Maps']['active'])
+  // Gmap
+  script(type='text/javascript', src='http://maps.google.com/maps/api/js?sensor=false')
+  script(src='vendor/gmap/jquery.gmap.min.js')
+
+// END Page Custom Script
+
+// App Main
+script(src='app/js/app.js')

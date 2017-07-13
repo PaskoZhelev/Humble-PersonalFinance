@@ -1,0 +1,50 @@
+extends layout/main-layout
+
+block active-item
+  - menu['Elements']['active'] = 1
+  - menu['Elements']['S']['Dropdown']['active'] = 1
+
+
+block content
+  
+  h3 Dropdown Animations
+    br
+    small Extends the dropdown effects when open just adding 
+      code [data-play]
+
+  - var animations = ['bounce', 'flash', 'pulse', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounceIn', 'bounceInDown', 'bounceInLeft', 'bounceInRight', 'bounceInUp', 'fadeIn', 'fadeInDown', 'fadeInDownBig', 'fadeInLeft', 'fadeInLeftBig', 'fadeInRight', 'fadeInRightBig', 'fadeInUp', 'fadeInUpBig', 'flip', 'flipInX', 'flipInY', 'lightSpeedIn', 'rotateIn', 'rotateInDownLeft', 'rotateInDownRight', 'rotateInUpLeft', 'rotateInUpRight', 'slideInDown', 'slideInLeft', 'slideInRight', 'rollIn' ]
+  // START row
+  .row
+    - each val in animations
+      .col-md-3
+        +build-anim-panel(val)
+  // END row
+
+  //- bottom space for latest dropdowns
+  br
+  br
+  br
+  br
+  br
+
+
+mixin build-anim-panel(animation)
+  // START box placeholder
+  .box-placeholder
+    // START button group
+    .btn-group    
+      button.btn.btn-default.dropdown-toggle(data-toggle='dropdown', data-play="#{animation}")
+        = animation
+        |  
+        b.caret
+      ul.dropdown-menu
+        li
+          a(href='#') Action
+        li
+          a(href='#') Another action
+        li
+          a(href='#') Something else here
+        li
+          a(href='#') Separated link
+    // END button group
+  // END box placeholder

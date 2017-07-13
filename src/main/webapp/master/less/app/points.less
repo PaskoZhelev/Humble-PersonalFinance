@@ -1,0 +1,91 @@
+/* ========================================================================
+   Component: points.less
+ ========================================================================== */
+ 
+//
+// A single rounded point
+// 
+
+@point-sz-sm:       3px;
+@point-sz:          5px;
+@point-sz-lg:       8px;
+@point-sz-xl:       16px;
+
+.point {
+  display: inline-block;
+  width: @point-sz;
+  height: @point-sz;
+  border-radius: 500px;
+  margin: 0 .5em;
+  background-color: #ddd;
+  vertical-align: baseline;
+  &.text-left {
+    margin-left: 0;
+  }
+  &.text-right {
+    margin-right: 0;
+  }
+}
+
+.point-primary {
+  background-color: @brand-primary;
+}
+.point-success {
+  background-color: @brand-success;
+}
+.point-info {
+  background-color: @brand-info;
+}
+.point-warning {
+  background-color: @brand-warning;
+}
+.point-danger {
+  background-color: @brand-danger;
+}
+.point-green {
+  background-color: @brand-green;
+}
+.point-pink {
+  background-color: @brand-pink;
+}
+.point-inverse {
+  background-color: @brand-inverse;
+}
+.point-purple {
+  background-color: @brand-purple;
+}
+
+
+.point-sm {
+  width: @point-sz-sm;
+  height: @point-sz-sm;
+}
+
+.point-lg {
+  width: @point-sz-lg;
+  height: @point-sz-lg;
+}
+
+.point-xl {
+  width: @point-sz-xl;
+  height: @point-sz-xl;
+}
+
+.point-outline {
+  background-color: transparent;
+  &.point-primary {
+    border: 1px solid @brand-primary;
+  }
+  &.point-success {
+    border: 1px solid @brand-success;
+  }
+  &.point-info {
+    border: 1px solid @brand-info;
+  }
+  &.point-warning {
+    border: 1px solid @brand-warning;
+  }
+  &.point-danger {
+    border: 1px solid @brand-danger;
+  }
+}

@@ -1,0 +1,30 @@
+//- Extends the page layout
+extends ../layout/page-layout
+
+block content
+
+  .row.row-table(style="height: 100%; padding: 50px 0; background-color: #2c3037")
+    .col-lg-4.col-md-6.col-sm-8.col-xs-12.align-middle
+      // START panel
+      .panel.widget.b0(data-toggle="play-animation",data-play="fadeInUp",data-offset="0")
+        //-div(style="background-image: url('../app/img/bg8.jpg')")
+        img.img-responsive(src="../app/img/lock-bg.jpg")
+        .panel-body
+          h3.text-center Hello Sarah!
+          p.text-center Please login to unlock your screen.
+          form(role='form')
+            .form-group.has-feedback
+              .pull-right
+                a(href="#").text-muted: small Forgot your password?
+              label(for='exampleInputPassword1') Password
+              input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+              span.fa.fa-lock.form-control-feedback.text-muted
+            .clearfix
+              .checkbox.c-checkbox.pull-left
+                label
+                  input(type='checkbox', value='')
+                  span.fa.fa-check
+                  |  Remember Me
+              .pull-right
+                button.btn.btn-primary(type='button') Unlock
+      // END panel

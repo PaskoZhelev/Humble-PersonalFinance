@@ -1,0 +1,187 @@
+// START Top Navbar
+nav.navbar.navbar-default.navbar-top.navbar-fixed-top(role='navigation')
+    // START navbar header
+    .navbar-header
+      a.navbar-brand(href='#') 
+        .brand-logo 47Admin 
+        .brand-logo-collapsed 47
+    // END navbar header
+
+    // START Nav wrapper
+    .nav-wrapper
+      // START Left navbar
+      ul.nav.navbar-nav
+        li
+          a(href='#', data-toggle="aside")
+            em.fa.fa-align-left
+        li
+          a(href='#', data-toggle="navbar-search")
+            em.fa.fa-search
+      // END Left navbar
+
+      // START Right Navbar
+      ul.nav.navbar-nav.navbar-right
+        // START Messages menu (dropdown-list)
+        li.dropdown.dropdown-list
+          a.dropdown-toggle(href='#', data-toggle='dropdown', data-play="bounceIn")
+            em.fa.fa-envelope
+            .label.label-danger 300
+          // START Dropdown menu
+          ul.dropdown-menu
+            li.dropdown-menu-header
+              | You have 5 new messages
+            li
+              .scroll-viewport
+                // START list group
+                .list-group.scroll-content
+                  // START list group item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        img.media-object.img-rounded(style='width: 48px; height: 48px;', src="app/img/user/01.jpg", alt="Image")
+                      .media-body.clearfix
+                        small.pull-right 2h
+                        strong.media-heading.text-primary 
+                          .point.point-success.point-lg
+                          | Sheila Carter
+                        p.mb-sm: small Cras sit amet nibh libero, in gravida nulla. Nulla...
+                  // END list group item
+                  // START list group item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        img.media-object.img-rounded(style='width: 48px; height: 48px;', src="app/img/user/04.jpg", alt="Image")
+                      .media-body.clearfix
+                        small.pull-right 3h
+                        strong.media-heading.text-primary 
+                          .point.point-success.point-lg
+                          | Rich Reynolds
+                        p.mb-sm: small Cras sit amet nibh libero, in gravida nulla. Nulla...
+                  // END list group item
+                  // START list group item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        img.media-object.img-rounded(style='width: 48px; height: 48px;', src="app/img/user/03.jpg", alt="Image")
+                      .media-body.clearfix
+                        small.pull-right 4h
+                        strong.media-heading.text-primary 
+                          .point.point-danger.point-lg
+                          | Beverley Pierce
+                        p.mb-sm: small Cras sit amet nibh libero, in gravida nulla. Nulla...
+                  // END list group item
+                  // START list group item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        img.media-object.img-rounded(style='width: 48px; height: 48px;', src="app/img/user/05.jpg", alt="Image")
+                      .media-body.clearfix
+                        small.pull-right 4h
+                        strong.media-heading.text-primary 
+                          .point.point-danger.point-lg
+                          | Perry Cole
+                        p.mb-sm: small Cras sit amet nibh libero, in gravida nulla. Nulla...
+                  // END list group item
+                  // START list group item
+                  a.list-group-item(href='#')
+                    .media
+                      .pull-left
+                        img.media-object.img-rounded(style='width: 48px; height: 48px;', src="app/img/user/06.jpg", alt="Image")
+                      .media-body.clearfix
+                        small.pull-right 4h
+                        strong.media-heading.text-primary 
+                          .point.point-danger.point-lg
+                          | Carolyn Carpenter
+                        p.mb-sm: small Cras sit amet nibh libero, in gravida nulla. Nulla...
+                  // END list group item
+                // END list group
+            // START dropdown footer
+            li.p: a(href='#').text-center
+                small.text-primary READ ALL
+            // END dropdown footer
+          // END Dropdown menu
+        // END Messages menu (dropdown-list)
+
+        // START Alert menu
+        li.dropdown.dropdown-list
+          a.dropdown-toggle(href='#', data-toggle='dropdown', data-play="bounceIn")
+            em.fa.fa-bell
+            .label.label-info 120
+          // START Dropdown menu
+          ul.dropdown-menu
+            li
+              // START list group
+              .list-group
+                // list item
+                a.list-group-item(href='#')
+                  .media
+                    .pull-left
+                      em.fa.fa-envelope-o.fa-2x.text-success
+                    .media-body.clearfix
+                      .media-heading Unread messages
+                      p.m0: small You have 10 unread messages
+                // list item
+                a.list-group-item(href='#')
+                  .media
+                    .pull-left
+                      em.fa.fa-cog.fa-2x
+                    .media-body.clearfix
+                      .media-heading New settings
+                      p.m0: small There are new settings available
+                // list item
+                a.list-group-item(href='#')
+                  .media
+                    .pull-left
+                      em.fa.fa-fire.fa-2x
+                    .media-body.clearfix
+                      .media-heading Updates
+                      p.m0: small There are 
+                        span.text-primary 2 
+                        |  new updates available
+                // last list item 
+                a.list-group-item(href='#')
+                  small Unread notifications
+                  span.badge 14
+              // END list group
+          // END Dropdown menu
+        // END Alert menu
+        // START User menu
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', data-play="bounceIn")
+            em.fa.fa-user
+          // START Dropdown menu
+          ul.dropdown-menu
+            li
+              .p
+                p Overall progress
+                .progress.progress-striped.progress-xs.m0
+                    .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%;')
+                      span.sr-only 80% Complete
+            li.divider
+            li: a(href='#') Profile
+            li: a(href='#') Settings
+            li: a(href='#') Notifications
+              .label.label-info.pull-right 5
+            li: a(href='#') Messages
+              .label.label-danger.pull-right 10
+            li: a(href="#") Logout
+          // END Dropdown menu
+        // END User menu
+        block offsidebar-toggle
+          // START Contacts button
+          li
+            a(href='#', data-toggle="offsidebar")
+              em.fa.fa-align-right
+          // END Contacts menu
+      // END Right Navbar
+    // END Nav wrapper
+    
+    // START Search form
+    form.navbar-form(role='search')
+      .form-group.has-feedback
+        input.form-control(type='text', placeholder='Type and hit Enter..')
+        .fa.fa-times.form-control-feedback(data-toggle="navbar-search-dismiss")
+      button.hidden.btn.btn-default(type='submit') Submit
+    // END Search form
+
+// END Top Navbar

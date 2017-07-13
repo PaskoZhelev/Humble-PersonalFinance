@@ -1,0 +1,182 @@
+/* ========================================================================
+   Component: layout.less
+ ========================================================================== */
+ 
+//
+// Main layout
+// This file controls the presentation of all components
+//  .wrapper
+//    > section
+//      > .main-content
+//    > .aside
+// 
+// If modified or removed make sure to check the variable
+// shared with other components
+// -------------------------------------------------------------
+
+
+@aside-wd:                                250px;
+@aside-wd-toggled:                        70px;
+
+@navbar-hg:                               @navbar-height;
+
+@z-index-main-section:                    11;
+
+// Taken from bootstrap variables
+// to match all components media queries
+@mq-desktop-lg:                           @screen-lg-desktop; // Usually 1200px
+@mq-desktop:                              @screen-desktop;    // Usually 992px
+@mq-tablet:                               @screen-sm-min;     // Usually 768px
+@mq-mobile:                               @screen-phone;      // Usually 480px
+
+@desktop-lg:                              ~"only screen and (min-width: @{mq-desktop-lg})";
+@desktop:                                 ~"only screen and (min-width: @{mq-desktop})";
+@tablet:                                  ~"only screen and (min-width: @{mq-tablet})";
+@mobile:                                  ~"only screen and (min-width: @{mq-mobile})";
+
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+// Main wrapper
+// -----------------------------
+.wrapper {
+  .clearfix();
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .transition(all .3s cubic-bezier(.23,1,.32,1));
+  
+  &.wrapper-boxed {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  // Contains the main sidebar
+  > .aside {
+    position: absolute;
+    margin-top: @navbar-hg * 2;
+    top: 0; left: 0;
+    bottom: 0;
+    width: @aside-wd;
+    z-index: @z-index-main-section - 1; // Hides behind the main section
+
+  }
+
+  // Contains the main content
+  > section {
+    position: relative;
+    background-color: @body-bg;
+    min-height: 100%;
+    z-index: @z-index-main-section;
+    margin-left: 0;
+  }
+}
+
+// Page main content
+// -----------------------------
+.main-content {
+  padding: 20px 10px;
+  > h3 {
+    margin: 0 0 30px 0;
+    font-weight: normal;
+  }
+}
+
+// Desktop layout
+// -----------------------------
+
+@media @tablet {
+
+  .wrapper {
+    > .aside {
+      position: fixed;
+      z-index: 501;
+      margin-top: @navbar-hg;
+    }
+    > section {
+      margin-left: @aside-wd;
+      padding-top: @navbar-hg;
+    }
+  }
+
+  .main-content {
+    padding: 20px 40px;
+  }
+
+
+}
+
+// Aside toggled layout
+// On mobile acts like offcanvas
+// -----------------------------
+
+.aside-toggled {
+  overflow-y: hidden;
+  .wrapper > section  {
+    margin-left: @aside-wd;
+  }
+}
+
+.csstransforms3d  {
+  
+  .wrapper > section {
+    .translate3d(0,0,0);
+    .transition(all .3s ease);
+  }
+
+  .aside-toggled {
+    .wrapper > section  {
+      margin-left: 0;
+      .translate3d(@aside-wd,0,0);
+      .transition(all .3s ease);
+    }
+  }
+
+}
+
+// Aside toggled layout
+// On desktop acts like condensed
+// -------------------------------
+
+@media @tablet {
+  // Aside status toggled via JS
+  .aside-toggled {
+    overflow-y: auto;
+    .wrapper {
+      > .aside {
+        width: @aside-wd-toggled;
+      }
+      > section {
+        margin-left: @aside-wd-toggled;
+      }
+    }
+  }
+
+  // reset transform animation on desktop
+  .csstransforms3d  {
+    .wrapper > section {
+      //.disable-transform();
+      //.transition(none);
+    }
+    .aside-toggled {
+      .wrapper > section {
+        .disable-transform();
+        margin-left: @aside-wd-toggled;
+        //.transition(none);
+      }
+    }
+  }
+
+}
+
+// mixin to remove transformations
+.disable-transform () {
+   -webkit-transform: none;
+   -moz-transform: none;
+   -opera-transform: none;
+   -ms-transform: none;
+   transform: none;  
+}

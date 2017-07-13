@@ -1,0 +1,242 @@
+/* ========================================================================
+   Component: top-navbar.less
+ ========================================================================== */
+ 
+//
+// Horizontal top navbar 
+// based on the bootstrap navbar styles and markup
+// ----------------------------------------------------
+
+@nav-header-bg:         @brand-primary;
+@nav-header-wd:         @aside-wd;
+@nav-header-wd-toggled: @aside-wd-toggled;
+
+// Navbar top layout
+.navbar-top {
+  -webkit-backface-visibility: hidden; /* fixes chrome jump */
+  margin-bottom: 0;
+  border-radius: 0;
+
+  @media @tablet {
+    .navbar-header {
+      width: @nav-header-wd;
+      text-align: center;
+      .navbar-brand {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Navbar Mobile General styles
+// ------------------------------
+
+.navbar-top {
+  position: relative;
+
+  .navbar-header {
+    position: relative;
+    background-color: @nav-header-bg;
+    // overlaps nav-wrapper
+    z-index: 11;
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+      text-shadow: 0 1px 3px #444;
+    }
+    .brand-logo { display: block; }
+    .brand-logo-collapsed { display: none; }
+  }
+
+  // Navbar link active style
+  .navbar-nav > .active > a,
+  .navbar-nav > .open   > a {
+    &, &:hover, &:focus {
+      background-color: #fff;
+      background-color: transparent;
+    }
+  }
+
+  // the button to toggle search
+  [data-toggle='navbar-search'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    font-size: 18px;
+    line-height: @navbar-height;
+    color: #fff !important;
+    color: rgba(255,255,255,.5) !important;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+}
+
+// contains elements below header
+.nav-wrapper {
+  padding: 0 15px;
+
+  // restore floating props for navbar items
+  .nav.navbar-nav {
+    float: left;
+    &.navbar-right {
+      float: right;
+    }
+  }
+  .nav > li {
+    position: static;
+    float: left;
+  }
+  
+  // fullwidth dropdowns
+  .navbar-nav .open .dropdown-menu {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    left: 0px;
+    right: 0px;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+  } 
+}
+
+// Navbar Search Form
+// ------------------------------
+.navbar-top {
+  
+  .navbar-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    height: @navbar-height;
+    z-index: 1;
+    .transition(all .3s);
+
+    .form-group {
+      height: 100%;
+      width: 100%;
+    }
+    .form-control {
+      height: 100%;
+      border: 0;
+      border-radius: 0;
+      width: 100%;
+    }
+    &.open {
+      top: 50%;
+    }
+    // re locate and center feedback
+    .has-feedback .form-control-feedback {
+      height: 30px;
+      cursor: pointer;
+      top: 50%;
+      margin-top: -15px;
+      line-height: 30px;
+      margin-right: 10px;
+      color: #c1c2c3;
+      font-size: 1.5em;
+    }
+  }
+
+  @media @tablet {
+    .navbar-form {
+      left: @nav-header-wd;
+      &.open {
+        top: 100%;
+      }
+    } 
+  }
+
+}
+
+// Navbar Desktop styles
+// ------------------------------
+
+@media @tablet {
+
+  // Navbar top styles
+  .navbar-top {
+    position: fixed;
+    top: 0; 
+    left:0;
+    right: 0;
+    border: 0;
+    background-color: #fff;
+
+    // Dropdown link open style
+    .navbar-nav > a {
+      box-shadow: 0 0 0 #000 inset;
+      .transition(all .2s);
+    }
+    .navbar-nav > .open   > a {
+      &, &:hover, &:focus {
+        //border-bottom: 3px solid @link-color;
+        box-shadow: 0 -3px 0 @link-color inset;
+        .transition(all .2s);
+      }
+    }
+
+
+    // relocate search toggle button
+    [data-toggle="navbar-search"] {
+      position: static;
+      color: #aaa !important;
+      font-size: inherit !important;
+      line-height: inherit !important;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  } // .navbar-top
+
+
+  .nav-wrapper {
+    .clearfix();
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    // behined nav-header
+    z-index: 10;
+
+    // restore nav items positions
+    .nav > li {
+      //position: relative;
+    }
+
+    // restore opened dropdown 
+    .navbar-nav .open .dropdown-menu {
+      left: auto;
+      right: auto;
+    }
+    .navbar-nav.navbar-right .open .dropdown-menu {
+      left: auto;
+      right: 0;
+    }
+
+  }
+
+}
+
+
+@media @tablet {
+  .aside-toggled {
+    .navbar-top {
+
+      .navbar-header {
+        .brand-logo { display: none; }
+        .brand-logo-collapsed { display: block; }
+      }
+
+      .navbar-header {
+        width: @nav-header-wd-toggled;
+      }
+
+      .navbar-form {
+        left: @nav-header-wd-toggled;
+      }
+    }
+
+  }
+}

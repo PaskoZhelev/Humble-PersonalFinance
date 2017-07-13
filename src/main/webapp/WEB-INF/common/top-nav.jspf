@@ -1,0 +1,62 @@
+<!-- START Top Navbar-->
+      <nav role="navigation" class="navbar navbar-default navbar-top navbar-fixed-top">
+         <!-- START navbar header-->
+         <div class="navbar-header">
+            <a href="/home" class="navbar-brand">
+               <div class="brand-logo"><img src="app/img/humble-logo.png" alt="Logo" width="132" height="41.9" /></div>
+               <div class="brand-logo-collapsed"></div>
+            </a>
+         </div>
+         <!-- END navbar header-->
+         <!-- START Nav wrapper-->
+         <div class="nav-wrapper">
+            <!-- START Left navbar-->
+            <ul class="nav navbar-nav">
+               <li>
+                  <a href="#" data-toggle="aside">
+                     <em class="fa fa-align-left"></em>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" data-toggle="navbar-search">
+                     <em class="fa fa-search"></em>
+                  </a>
+               </li>
+            </ul>
+            <!-- END Left navbar-->
+            <!-- START Right Navbar-->
+            <ul class="nav navbar-nav navbar-right">
+               <!-- START Messages menu (dropdown-list)-->
+            
+               <!-- END Alert menu-->
+               <!-- START User menu-->
+               <li class="dropdown">
+                  <a href="/settings" >
+                     <em class="fa fa-user"></em>
+                  </a>
+                  <!-- START Dropdown menu-->
+                  <!-- END Dropdown menu-->
+               </li>
+               <!-- END User menu-->
+               <!-- START Contacts button-->
+               <li>
+                  <a href="#" data-toggle="offsidebar">
+                     <em class="fa fa-align-right"></em>
+                  </a>
+               </li>
+               <!-- END Contacts menu-->
+            </ul>
+            <!-- END Right Navbar-->
+         </div>
+         <!-- END Nav wrapper-->
+         <!-- START Search form-->
+         <form role="search" class="navbar-form">
+            <div class="form-group has-feedback">
+               <input type="text" placeholder="Type and hit Enter.." class="form-control">
+               <div data-toggle="navbar-search-dismiss" class="fa fa-times form-control-feedback"></div>
+            </div>
+            <button type="submit" class="hidden btn btn-default">Submit</button>
+         </form>
+         <!-- END Search form-->
+      </nav>
+      <!-- END Top Navbar-->

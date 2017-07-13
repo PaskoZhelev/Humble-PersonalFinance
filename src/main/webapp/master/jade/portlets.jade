@@ -1,0 +1,224 @@
+extends layout/main-layout
+
+block active-item
+  - menu['Elements']['active'] = 1
+  - menu['Elements']['S']['Portlets']['active'] = 1
+
+block content
+  
+  h3 Portlets
+    br
+    small Draggable anywhere panels and widgets
+
+
+  // START row
+  .row
+    .col-lg-4(data-toggle="portlet")
+      // START panel
+      .panel.panel-default
+        .panel-heading.portlet-handler
+          | Default Panel
+          a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right.portlet-cancel
+            em.fa.fa-times
+        .panel-body
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+        .panel-footer
+          | Panel Footer
+      // END panel
+    .col-lg-4(data-toggle="portlet")
+      // START panel
+      .panel.panel-primary
+        .panel-heading.portlet-handler
+          | Primary Panel
+          a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right.portlet-cancel
+            em.fa.fa-times
+        .panel-body
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+        .panel-footer
+          | Panel Footer
+      // END panel
+    .col-lg-4(data-toggle="portlet")
+      // START panel
+      .panel.panel-success
+        .panel-heading.portlet-handler
+          | Success Panel
+          a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right.portlet-cancel
+            em.fa.fa-times
+        .panel-body
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+        .panel-footer
+          | Panel Footer
+      // END panel
+  // END row
+  // START row
+  .row
+    .col-lg-4(data-toggle="portlet")
+      // START panel
+      .panel.panel-info
+        .panel-heading.portlet-handler
+          | Info Panel
+        .panel-body
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+        .panel-footer
+          | Panel Footer
+      // END panel
+    .col-lg-4(data-toggle="portlet")
+      // START panel
+      .panel.panel-warning
+        .panel-heading.portlet-handler
+          | Warning Panel
+        .panel-body
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+        .panel-footer
+          | Panel Footer
+      // END panel
+    .col-lg-4(data-toggle="portlet")
+      // START panel
+      .panel.panel-danger
+        .panel-heading.portlet-handler
+          | Danger Panel
+        .panel-body
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+        .panel-footer
+          | Panel Footer
+      // END panel
+  // END row
+
+  // START row
+  .row
+    .col-lg-4(data-toggle="portlet")
+      // START panel
+      .panel.panel-inverse
+        .panel-heading.portlet-handler
+          | Inverse Panel
+        .panel-body
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+        .panel-footer
+          | Panel Footer
+      // END panel
+    .col-lg-4(data-toggle="portlet")
+      // START panel
+      .panel.panel-purple
+        .panel-heading.portlet-handler
+          | Purple Panel
+        .panel-body
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+        .panel-footer
+          | Panel Footer
+      // END panel
+    .col-lg-4(data-toggle="portlet")
+      // START panel
+      .panel.panel-green
+        .panel-heading.portlet-handler
+          | Green Panel
+        .panel-body
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+        .panel-footer
+          | Panel Footer
+      // END panel
+  // END row
+
+  // START row
+  .row
+    .col-lg-3(data-toggle="portlet")
+      // START widget
+      .panel.widget
+        .portlet-handler
+          .row.row-table.row-flush
+            .col-xs-4.bg-info.text-center
+              em.fa.fa-users.fa-2x
+            .col-xs-8
+              .panel-body.text-center
+                h4.mt0 10k
+                p.mb0.text-muted VISITORS
+      // END widget
+    .col-lg-3(data-toggle="portlet")
+      // START widget
+      .panel.widget
+        .portlet-handler
+          .row.row-table.row-flush
+            .col-xs-4.bg-danger.text-center
+              em.fa.fa-music.fa-2x
+            .col-xs-8
+              .panel-body.text-center
+                h4.mt0 100%
+                p.mb0.text-muted VOLUME
+      // END widget
+    .col-lg-3(data-toggle="portlet")
+      // START widget
+      .panel.widget
+        .portlet-handler
+          .row.row-table.row-flush
+            .col-xs-4.bg-inverse.text-center
+              em.fa.fa-code-fork.fa-2x
+            .col-xs-8
+              .panel-body.text-center
+                h4.mt0 150 
+                p.mb0.text-muted FORKS
+      // END widget
+    .col-lg-3(data-toggle="portlet")
+      // START widget
+      .panel.widget
+        .portlet-handler
+          .row.row-table.row-flush
+            .col-xs-4.bg-green.text-center
+              em.fa.fa-inbox.fa-2x
+            .col-xs-8
+              .panel-body.text-center
+                h4.mt0 10
+                p.mb0.text-muted NEW MESSAGES
+      // END widget
+  // END row
+
+  // START row
+  .row
+    .col-lg-3(data-toggle="portlet")
+      // START widget
+      .panel.widget
+        .portlet-handler
+          .row.row-table.row-flush
+            .col-xs-12
+              .panel-body.text-center.bg-purple
+                h4.mt0 10k
+                p.mb0.text-white VISITORS
+      // END widget
+    .col-lg-3(data-toggle="portlet")
+      // START widget
+      .panel.widget
+        .portlet-handler
+          .row.row-table.row-flush
+            .col-xs-12
+              .panel-body.text-center.bg-pink
+                h4.mt0 100%
+                p.mb0.text-white VOLUME
+      // END widget
+    .col-lg-3(data-toggle="portlet")
+      // START widget
+      .panel.widget
+        .portlet-handler
+          .row.row-table.row-flush
+            .col-xs-12
+              .panel-body.text-center.bg-success
+                h4.mt0 150 
+                p.mb0.text-white FORKS
+      // END widget
+    .col-lg-3(data-toggle="portlet")
+      // START widget
+      .panel.widget
+        .portlet-handler
+          .row.row-table.row-flush
+            .col-xs-12
+              .panel-body.text-center.bg-primary
+                h4.mt0 10
+                p.mb0.text-white NEW MESSAGES
+      // END widget
+  // END row

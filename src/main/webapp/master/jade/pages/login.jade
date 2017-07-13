@@ -1,0 +1,36 @@
+//- Extends the page layout
+extends ../layout/page-layout
+
+block content
+
+  .row.row-table(style="height: 100%; padding: 50px 0; background-color: #2c3037")
+    .col-lg-3.col-md-6.col-sm-8.col-xs-12.align-middle
+      // START panel
+      .panel.panel-default.panel-flat(data-toggle="play-animation",data-play="fadeInUp",data-offset="0")
+        p.text-center.mb-lg
+          br
+          a(href="#")
+            img.block-center.img-rounded(src='../app/img/logo3.png', alt='Image')
+        p.text-center.mb-lg
+          strong SIGN IN TO CONTINUE.
+        .panel-body
+          form(role='form').mb-lg
+            .text-right.mb-sm
+              a.text-muted(href="#") Need to Signup?
+            .form-group.has-feedback
+              input#exampleInputEmail1.form-control(type='email', placeholder='Enter email')
+              span.fa.fa-envelope.form-control-feedback.text-muted
+            .form-group.has-feedback
+              input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+              span.fa.fa-lock.form-control-feedback.text-muted
+            .clearfix
+              .checkbox.c-checkbox.pull-left.mt0
+                label
+                  input(type='checkbox', value='')
+                  span.fa.fa-check
+                  |  Remember Me
+              .pull-right
+                a.text-muted(href="#") Forgot your password?
+            button.btn.btn-block.btn-primary(type='submit') Login
+                
+      // END panel

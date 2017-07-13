@@ -1,0 +1,92 @@
+extends layout/main-layout
+
+block active-item
+  - menu['Charts']['active'] = 1
+  - menu['Charts']['S']['Flot']['active'] = 1
+
+block content
+  
+  h3 Flot charts
+    br
+    small A showcase of different components inside tables
+  // START row
+  .row
+    .col-lg-12
+      .panel.panel-default
+        .panel-heading
+          a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right
+            em.fa.fa-times
+          a(href="#", data-perform="panel-collapse", data-toggle="tooltip", title="Collapse Panel").pull-right
+            em.fa.fa-minus
+          a(href="#", data-perform="panel-refresh", data-spinner="traditional", data-toggle="tooltip", title="Refresh Panel").pull-right
+            em.fa.fa-refresh
+          .panel-title Area
+        .panel-collapse
+          .panel-body
+            .chart-area.flot-chart(style='height: 250px;', data-source="server/chart-data.php?type=area")
+  // END row
+  // START row
+  .row
+    .col-lg-6
+      .panel.panel-default
+        .panel-heading
+          a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right
+            em.fa.fa-times
+          a(href="#", data-perform="panel-collapse", data-toggle="tooltip", title="Collapse Panel").pull-right
+            em.fa.fa-minus
+          .panel-title Bar
+        .panel-collapse
+          .panel-body
+            .chart-bar.flot-chart(style='height: 250px;', data-source="server/chart-data.php?type=bar")
+    .col-lg-6
+      .panel.panel-default
+        .panel-heading
+          a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right
+            em.fa.fa-times
+          a(href="#", data-perform="panel-collapse", data-toggle="tooltip", title="Collapse Panel").pull-right
+            em.fa.fa-minus
+          .panel-title Bar - Stacked
+        .panel-collapse
+          .panel-body
+            .indicator.show
+              span.spinner
+            .chart-bar-stacked.flot-chart(style='height: 250px;', data-source="server/chart-data.php?type=barstacked")
+  // END row
+  // START row
+  .row
+    .col-lg-12
+      .panel.panel-default
+        .panel-heading
+          a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right
+            em.fa.fa-times
+          a(href="#", data-perform="panel-collapse", data-toggle="tooltip", title="Collapse Panel").pull-right
+            em.fa.fa-minus
+          .panel-title Line
+        .panel-collapse
+          .panel-body
+            .chart-line.flot-chart(style='height: 250px;', data-source="server/chart-data.php?type=line")
+  // END row
+  // START row
+  .row
+    .col-md-6
+      .panel.panel-default
+        .panel-heading
+          a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right
+            em.fa.fa-times
+          a(href="#", data-perform="panel-collapse", data-toggle="tooltip", title="Collapse Panel").pull-right
+            em.fa.fa-minus
+          .panel-title Pie
+        .panel-body
+          .chart-pie.flot-chart(style='height: 200px;', data-source="server/chart-data.php?type=pie")
+    .col-md-6
+      .panel.panel-default
+        .panel-heading
+          a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right
+            em.fa.fa-times
+          a(href="#", data-perform="panel-collapse", data-toggle="tooltip", title="Collapse Panel").pull-right
+            em.fa.fa-minus
+          .panel-title Donut 
+            small (loaded from json)
+        .panel-body
+          .chart-donut.flot-chart(style='height: 200px;', data-source="server/chart-data-donut.json")
+  // END row

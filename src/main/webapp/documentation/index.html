@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+	<title>47Admin - Bootstrap Admin Skin</title>
+ 	<meta name="description" content="">
+	<meta name="author" content="@geedmo">
+	<meta name="copyright" content="@geedmo">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2014-06-25T00:00:00+02:00">
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/documenter_style.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+	
+	<style>
+		html, body{background-color:#FCFCFC;color:#555555;}
+		h1,h2,h3,h4,h5,h6{color:#555555;}
+		section table{background-color:#FCFCFC;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		a.brand{background-image:url();}
+		a, a:hover, a:active{color:#3498DB;}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #A1A2A3;}
+		div.navbar-inner, .navbar .nav li ul{background:#FFFFFF;color:#222222;}
+		a.btn-navbar{background:#FFFFFF;color:#222222;}
+		.navbar .nav li a{color:#222222;text-shadow:1px 1px 0px #EEEEEE;}
+		.navbar .nav li a:hover, .navbar .nav li.active a{text-shadow:none;}
+		div.navbar-inner ul{}
+		.marketing-byline{color:#A1A2A3;}
+		.navbar .nav > li a{color:#444444;}
+		.navbar .nav > li a:hover, a.btn-navbar:hover{background:#444444;color:#DDDDDD;}
+		.navbar .nav .active > a, .navbar .nav .active > a:hover, a.btn-navbar:active{background-color:#444444;color:#DDDDDD;}
+		.navbar .nav li ul li a:hover{background:#444444;color:#DDDDDD;}
+		.navbar .nav li ul li a:active{background:#444444;color:#DDDDDD;}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #3498DB, #3498DB);
+			  background-image: -ms-linear-gradient(top, #3498DB, #3498DB);
+			  background-image: -webkit-gradient(linear, 0 0, 0 3498DB%, from(#FFFFFF), to(#3498DB));
+			  background-image: -webkit-linear-gradient(top, #3498DB, #3498DB);
+			  background-image: -o-linear-gradient(top, #3498DB, #3498DB);
+			  background-image: linear-gradient(top, #3498DB, #3498DB);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3498DB', endColorstr='#3498DB', GradientType=0);
+			  border-color: #3498DB #3498DB #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  background-color: #3498DB;
+		}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+	
+	
+    </head>
+    
+<body class="documenter-project-47admin" data-spy="scroll" id="top">
+
+<!-- Documentation Navbar -->
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container"> 
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+			<a class="brand" href="#">47Admin - Bootstrap Admin Skin</a>
+			<div class="nav-collapse">
+			<ul class="nav">
+					
+			<li><a href="#overview" title="Overview">Overview</a></li>
+			<li><a href="#introduction" title="Introduction">Introduction</a>
+				<ul>
+					<li><a href="#introduction_before_start_tips">Before start Tips</a>
+					<li><a href="#introduction_installing">Installing</a>
+				</ul>
+			</li>
+			<li><a href="#layout" title="Layout">Layout</a></li>
+			<li><a href="#usage" title="Usage">Usage</a>
+				<ul>
+					<li><a href="#usage_stronginstall_node_and_gulp_strong">Install node and gulp</a>
+					<li><a href="#usage_javascript">Javascript</a>
+					<li><a href="#usage_jade_structure">Jade structure</a>
+					<li><a href="#usage_jade_sidebar">Jade sidebar</a>
+					<li><a href="#usage_less_structure_nbsp">LESS structure&nbsp;</a>
+				</ul>
+			</li>
+			<li><a href="#components" title="Components">Components</a>
+				<ul>
+					<li><a href="#components_panel_actions">Panel Actions</a>
+					<li><a href="#components_notifications">Notifications</a>
+					<li><a href="#components_animations">Animations</a>
+					<li><a href="#components_utilities">Utilities</a>
+					<li><a href="#components_charts">Charts</a>
+					<li><a href="#components_file_upload">File Upload</a>
+					<li><a href="#components_slim_scroll">Slim Scroll</a>
+					<li><a href="#components_masonry_grid">Masonry Grid</a>
+					<li><a href="#components_datatables">Datatables</a>
+					<li><a href="#components_google_maps">Google Maps</a>
+					<li><a href="#components_full_calendar">Full Calendar</a>
+				</ul>
+			</li>
+			<li><a href="#credits" title="Credits">Credits</a></li>
+
+			</ul>
+			</div>
+		</div>
+	</div>
+</div> <!-- End of Navbar -->
+
+<!-- Main Container Beginning -->			
+			
+<div class="container" id="documenter_content">
+    
+	<div id="documenter-cover">
+	<div class="masthead">
+	    <h1>47Admin - Bootstrap Admin Skin</h1>
+	    <p></p>
+	    <ul class="marketing-byline">
+			<li>created: 04/29/2014</li>
+			<li>latest update: 06/25/2014</li>
+			<li>by: @geedmo</li>
+			<li><a href=""></a></li>
+		</ul>
+	    <p class="download-info">
+			<a href="http://codecanyon.net/user/geedmo#contact" class="btn btn-primary btn-large">Support</a> 
+		</p>
+		
+	</div> <!-- masthead -->
+	
+   <div id="intro">
+    <p class="highlight hero-unit">Bootstrap 3 skin designed for Admin Templates</p>
+   </div> <!-- intro -->
+   
+	</div>
+      
+  <section id="overview">
+	<div class="page-header"><h3>Overview</h3><hr class="notop"></div>
+<div>
+	This item is a Bootstrap 3 skin designed to work with admin templates. Built on latest version of Twitter Bootstrap 3 with new&nbsp;features and customizable&nbsp;options.&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	This document aims to explain the best way to integrate with the product and its components</div>
+<div>
+	&nbsp;</div>
+<div>
+	All the best and enjoy coding.</div>
+<div>
+	&nbsp;</div>
+</section>
+<section id="introduction">
+	<div class="page-header"><h3>Introduction</h3><hr class="notop"></div>
+<div>
+	<h4 id="introduction_before_start_tips">Before start Tips</h4>
+	<div>
+		<ul>			<li>				Do not start from&nbsp;scratch, use an existing asset and modify it to learn how it works.</li>
+		</ul>
+		<ul>			<li>				Explore the sources for ideas and sample code.</li>
+		</ul>
+		<ul>			<li>				Use Firebug or Chrome Developer Tools to find bugs on your website. Using one of those tools will help you to save time analizing the site and finding elements structure, like classes, id or tags</li>
+		</ul>
+		<div style="margin-left: 80px;">
+			<strong>Quick tip</strong></div>
+		<div style="margin-left: 80px;">
+			Open your site with Chrome, press F12 and go to console tab, reload your page and if something goes wrong you will your page errors in red text.</div>
+		<div style="margin-left: 80px;">
+			&nbsp;</div>
+		<ul>			<li>				Getting an error message? Someone might have seen it too, try a google search for a quick fix.</li>
+		</ul>
+	</div>
+	<ul>		<li>			Need to compile the source? Get&nbsp;<a href="http://alphapixels.com/prepros/">Prepros&nbsp;</a>or&nbsp;<a href="http://incident57.com/codekit/">CodeKit</a>. Both tools are excellent to work with pre-compiled languages like LESS and JADE.</li>
+	</ul>
+	<h4 id="introduction_installing">Installing</h4>
+</div>
+<div>
+	After download the zip package from Codecanyon unzip the files in a temporary folder and copy the following folders to your root working directory</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>- app/</strong></div>
+<div>
+	<strong>- pages/</strong></div>
+<div>
+	<strong>- vendor/</strong></div>
+<div>
+	&nbsp;</div>
+<div>
+	Next copy the file called template.html to your working directory. This file is an empty template to use as a boilerplate for your pages.&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div class="alert alert-info">
+	In case you want to work with the source files (LESS, JADE or Javascript) you will need the folder<strong>&nbsp;master/</strong></div>
+<div>
+	&nbsp;</div>
+<div class="alert alert-info">
+	In case you need to use the upload or chart components you will need the folder&nbsp;<strong>&nbsp;server/</strong></div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>The <em>app </em>folder</strong></div>
+<div>
+	&nbsp;</div>
+<div>
+	This folder contains the compiled files. This files are ready to desploy on your server.&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<div>
+		<strong>The&nbsp;<em>pages&nbsp;</em>folder</strong></div>
+	<div>
+		&nbsp;</div>
+	<div>
+		This folder contains the compiled html files for the pages indluded. This files are ready to desploy on your server.&nbsp;</div>
+	<div>
+		&nbsp;</div>
+</div>
+<div>
+	<strong>The <em>vendor</em> folder</strong></div>
+<div>
+	&nbsp;</div>
+<div>
+	This folder contains the vendor files used to include plugins and other components. All this componenets are untouched from its original version so in case you have to update some of them you can do it by simply replacing its content.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>The <em>master </em>folder</strong></div>
+<div>
+	&nbsp;</div>
+<div>
+	This folder contains the source files. You will find the following folders inside</div>
+<div>
+	&nbsp;</div>
+<div style="margin-left: 40px;">
+	<strong>- jade</strong></div>
+<div style="margin-left: 40px;">
+	This folder contains JADE files. This files need to be compiled into html files to be displayed by a browser</div>
+<div style="margin-left: 40px;">
+	<strong>- less</strong></div>
+<div style="margin-left: 40px;">
+	This folder contains the LESS files for the <strong>core styles</strong> and <strong>bootstrap styles</strong>.&nbsp;</div>
+<div style="margin-left: 40px;">
+	<strong>- js</strong></div>
+<div style="margin-left: 40px;">
+	Here you will find pure JS files. All this files are concatenated into the file app.js.&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>The server folder</strong></div>
+<div>
+	&nbsp;</div>
+<div>
+	This folder contains php files asa demostration and guide for the flot chart and file upload components&nbsp;</div>
+<div>
+	&nbsp;</div>
+</section>
+<section id="layout">
+	<div class="page-header"><h3>Layout</h3><hr class="notop"></div>
+<p>	The following picture describes the main pieces of the layout</p>
+<p>	&nbsp;</p>
+<p>	<img alt="" src="layout.jpg"></p>
+<p>	&nbsp;</p>
+<p>	The layout is based on the following markup represented with&nbsp;</p>
+<div>
+	<pre class="prettyprint lang-html linenums">
+&lt;html&gt;
+  &lt;head&gt;
+    #metas and css
+  &lt;/head&gt;  
+  &lt;body&gt;
+    &lt;section class=&quot;wrapper&quot;&gt;
+        &lt;nav class=&quot;navbar navbar-default navbar-top navbar-fixed-top&quot;&gt;
+          #navbar top content
+        &lt;/nav&gt;
+
+        &lt;aside class=&quot;aside&quot;&gt;
+          #aside content (sidebar right)
+        &lt;/aside&gt;
+
+        &lt;aside class=&quot;offsidebar&quot;&gt;
+          #offsidebar content (left)
+        &lt;/aside&gt;
+
+        &lt;section&gt;
+          &lt;div class=&quot;main-content&quot;&gt;
+            #page content
+          &lt;/div&gt;  
+        &lt;/section&gt;
+     &lt;/section&gt;
+
+     #scripts
+
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<p>	The top navbar, is a compoenent based on the classic navbar-top from bootstrap but redesigned to containt a larger and collapsable header,&nbsp;</p>
+<p>	The sidebar (right) has different behavior on mobile and desktop devices. On desktop, under the class .aside-toggle the navbar is condensed (to save space), on mobiles, under the same class the navbar is displayed on screen and if toggled the navbar hides automatically (off-canvas)</p>
+<p>	The offsidebar is similar to the sidebar but it hides always off the screen. That means, the offsidebar is an offcanvas components.</p>
+<p>	The section tag, child of the .wrapper element contains the main content of the page under the element .main-content. All this structure is used to achieve the slide effect differents devices when the sidebar (on mobile) or offsidebar is toggled.</p>
+<p>	&nbsp;</p>
+<p>	&nbsp;</p>
+</section>
+<section id="usage">
+	<div class="page-header"><h3>Usage</h3><hr class="notop"></div>
+<h3>
+	<strong>Using compiled files</strong></h3>
+<p>
+	To use the compiled files you only need the content of the&nbsp;<strong>app</strong>&nbsp;folder.&nbsp;</p>
+<p>
+	You only need to link to this files in your pages (or use the <strong>template.html </strong>as a base) &nbsp;and done. Then you can continue customizing the <strong>app.css, app.js</strong> or <strong>bootstrap.js</strong></p>
+<p>
+	It&#39;s strongly suggested that you create and use a file <strong>custom.css</strong> for all your pages to avoid changing the main styles. This will make easy for you to track changes you have made and more simple to detect any issue in case you need support.</p>
+<h3>
+	<strong>Compiling files</strong></h3>
+<h4 id="usage_stronginstall_node_and_gulp_strong"><strong>Install node and gulp</strong></h4>
+<p>
+	<strong>Node.js</strong> is a platform built on Chrome&#39;s JavaScript runtime for easily building fast, scalable network applications.</p>
+<p>
+	<strong>Gulp </strong>is a task manager, you can define different tasks to run certains commands. Those commands does the compilation job for JADE and LESS, and concats the JS files.</p>
+<p>
+	The package includes under the&nbsp;<strong>master/</strong> folder the file&nbsp;<strong>gulpfile.js</strong> and&nbsp;<strong>package.json </strong>to install the required componets to compile the source files.</p>
+<div class="alert alert-info">
+	It&#39;s not necessary that you use gulp, you can choose to work with your favourite tool to compiles LESS, JADE and concat JS file (e.g. codekit, prepros)</div>
+<p>
+	The following steps are intended to be an orientation guide, if you are not experienced with this you will need to learn more about it from Google :)</p>
+<p>
+	- To install node, go to&nbsp;http://nodejs.org/<br>
+	- Then install npm&nbsp;https://www.npmjs.org/doc/README.html</p>
+<p>
+	After that, open a terminal and go to the <strong>master </strong>folder, then run the command <strong>npm install. </strong>This<strong>&nbsp;</strong>command will install gulp and all depencies.&nbsp;</p>
+<p>
+	Then run <strong>gulp</strong> to start the task manager&nbsp;</p>
+<p>
+	If everything goes fine, you should see the messages in the terminal telling you that most the task are done ok. The task includes a watch to compile automatically all files when they change.</p>
+<h4 id="usage_javascript">Javascript</h4>
+<p>
+	The JS files are divided in the <strong>app script</strong>, the <strong>page script</strong> and the <strong>modules</strong> folders.<br>
+	The module folder is shared by the app and pages script.</p>
+<p>
+	The modules folder contains different script used to init different features that requires Javascript. Those modules are plugin definitions (customized for this templates) and others are event listener like the dropdown animation, sidebar toggler, etc.</p>
+<p>
+	The app script is&nbsp;<strong>app.init.js</strong>. This script is contactenated after all modules to have one point where all the modules are loaded and intepreted and so, they are ready to use.</p>
+<p>
+	The page script is&nbsp;<strong>page.init.js</strong>. This script is contactenated after all modules to have one point where all the modules are loaded and intepreted and so, they are ready to use. The difference here is that the modules that you want to include in your pages must be specified in the file gulpfile.js (in case your using gulp)</p>
+<div>
+	&nbsp;</div>
+<div class="alert alert-info">
+	<strong>Do not include the file app.js in all your pages.</strong> Find the module and paste the source in page.js to keep pages lightweight and separated from the application source. Or even better, use a tool to concat only the modules required for your pages.</div>
+<h4 id="usage_jade_structure">Jade structure</h4>
+<p>
+	The JADE structure is based on a layout file named <strong>main-layout.jade</strong>, under the <strong>layout/&nbsp;</strong>folder and all templates <strong>extends </strong>this layout. There are also partials, included inthe layout file to separate different section of the page that are common to all templates.</p>
+<h4 id="usage_jade_sidebar">Jade sidebar</h4>
+<p>
+	The sidebar has a special treatment when using JADE templates. The main file for the sidebar is <strong>sidebar.jade </strong>under the <strong>partials/</strong> folders.&nbsp;<br>
+	This files include another named sidebar&nbsp;<strong>sidebar-config.jade</strong>&nbsp;this contains an array definition with the menu elements and mixin that uses that array to iterate and create all menu items.<br>
+	This&nbsp;technique has the following advantages<br>
+	- It allows to mark every menu item according to each page compiling, so you don&#39;t need to do it manually in the html source.<br>
+	- You can see more clearly the menu structure and make changes easily without browsing through the markup</p>
+<div class="alert alert-info">
+	Please, note that JADE generates <strong>static html</strong> templates. This templates need to be converted to PHP/ASP pages to make it <strong>dynamic</strong>.&nbsp;There are some server implementation on the web that can serve jade files compiling them before sent it to the client.</div>
+<h4 id="usage_less_structure_nbsp">LESS structure&nbsp;</h4>
+<p>
+	The LESS files are divided in three folders</p>
+<p>
+	<strong>bootstrap </strong>folder contains the bootstrap files. This files are compiled into bootstrap.css, with just the main bootstrap styles.</p>
+<p>
+	<strong>app </strong>folder contains the custom files for this templates and also it uses variables.less and mixins.less from bootstrap so it&#39;s possible to integrate the new components with the framework reducing duplicated declarations and allowing to have a single point of defintions.</p>
+<p>
+	<strong>pages&nbsp;</strong>folder contains the custom files pages. Each LESS file in this folder will should be compiled into its CSS version for a particular page. For example, the file include landing.less is included as landing.css just the for the landing page.</p>
+<p>
+	&nbsp;</p>
+<div class="alert alert-info">
+	There are many ways to keep separated the app source from the pages. The above mentioned are just an example.&nbsp;You should use the best that fit your needs.</div>
+<p>
+	&nbsp;</p>
+</section>
+<section id="components">
+	<div class="page-header"><h3>Components</h3><hr class="notop"></div>
+<h4 id="components_panel_actions">Panel Actions</h4>
+<p>
+	Panels can perform different actions. Currently there are three actions triggered by clicking an icon in the panel heading. The example markup is like follows</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;panel-heading&quot;&gt;
+   &lt;a href=&quot;#&quot; data-perform=&quot;panel-dismiss&quot; data-toggle=&quot;tooltip&quot; title=&quot;&quot; class=&quot;pull-right&quot; data-original-title=&quot;Close Panel&quot;&gt;
+      &lt;em class=&quot;fa fa-times&quot;&gt;&lt;/em&gt;
+   &lt;/a&gt;
+   &lt;a href=&quot;#&quot; data-perform=&quot;panel-collapse&quot; data-toggle=&quot;tooltip&quot; title=&quot;&quot; class=&quot;pull-right&quot; data-original-title=&quot;Collapse Panel&quot;&gt;
+      &lt;em class=&quot;fa fa-minus&quot;&gt;&lt;/em&gt;
+   &lt;/a&gt;
+   &lt;a href=&quot;#&quot; data-perform=&quot;panel-refresh&quot; data-spinner=&quot;traditional&quot; data-toggle=&quot;tooltip&quot; title=&quot;&quot; class=&quot;pull-right&quot; data-original-title=&quot;Refresh Panel&quot;&gt;
+      &lt;em class=&quot;fa fa-refresh&quot;&gt;&lt;/em&gt;
+   &lt;/a&gt;
+   &lt;div class=&quot;panel-title&quot;&gt;Title Here&lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+	Note the importance of the <strong>data-attibutes</strong>, the .<strong>pull-right</strong> class and the <strong>icon</strong> element.</p>
+<p>
+	And those actions are</p>
+<p>
+	- <strong>Dismiss</strong>: With a click the panel closes and remove itself. If the panel in inside a col-* element, it will remove the column to not leave an empty space.</p>
+<p>
+	- <strong>Collapse</strong>: this actions allows to collapse the panel body. This action uses extra clases thar are handled via Javascript transparently.</p>
+<p>
+	- <strong>Refresh</strong>: This action simply triggers an event in the .panel element that can be hooked by any other module to know when the user request a refresh (content reload).</p>
+<p>
+	In this action there are two parts to considere</p>
+<ul>
+	<li>
+		When the user clicks on the refresh button (icon), the handler automatically shows a loading spinner (plugin csspinner) and trigger the event (default name is<strong> panel-refresh</strong>).</li>
+</ul>
+<ul>
+	<li>
+		When you bind an element to the refresh event, your function will receive the standard event object and the <strong>panel reference</strong> (jQuery object) in the <strong>second parameter</strong>. When your function ends, you need to remove the spinner, to do that, just call the function removeSpinner of the panel element, like this <strong>panel.removeSpinner()</strong>;</li>
+</ul>
+<p>
+	At last, the spinner animation can be changed using the <strong>data-spinner</strong> attribute and the allowed values are the same used in the demo page for the Spinner animations. You can learn more about the spinner plugin <a href="http://jh3y.github.io/-cs-spinner/">here</a>.</p>
+<h4 id="components_notifications">Notifications</h4>
+<p>
+	The notification system is based &nbsp;on the notify component from UIKIT.&nbsp;<br>
+	There are two way to use it.</p>
+<p>
+	- Using a trigger element (via click) like a button , anchor, etc.</p>
+<pre class="prettyprint lang-html linenums">
+&lt;button type=&quot;button&quot; data-toggle=&quot;notify&quot; data-message=&quot;Message ..&quot; class=&quot;btn btn-default&quot;&gt;Button text&lt;/button&gt;</pre>
+<p>
+	<strong>data-toggle=&quot;notifiy&quot;</strong> is what idenitfies the element to be handled by the notify plugin<br>
+	<strong>data-message</strong>: the message you want to display. It accepts text or html.<br>
+	<strong>data-options</strong>: This is a string of options in json format. Learn more <a href="http://www.getuikit.com/docs/addons_notify.html">here</a></p>
+<p>
+	- Or when the pages first loads</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div data-toggle=&quot;notify&quot; data-onload data-message=&quot;...&quot; data-options=&quot;{&quot;status&quot;:&quot;danger&quot;, &quot;pos&quot;:&quot;top-right&quot;}&quot; class=&quot;hidden-xs&quot;&gt;&lt;/div&gt;</pre>
+<p>
+	Note the following</p>
+<p>
+	<strong>data-onload</strong>: When present, the alert box will be displayed automatically when page loads. No value required.&nbsp;<br>
+	<strong>hidden-xs</strong>: this class from bootstrap hides the element so its not displayed in the page.</p>
+<h4 id="components_animations">Animations</h4>
+<p>
+	The animations components uses a plugin called animo.js&nbsp;<a href="http://labs.bigroomstudios.com/libraries/animo-js">http://labs.bigroomstudios.com/libraries/animo-js</a><br>
+	This plugin uses the animation library <strong>animate.css</strong> by Dan Eden&nbsp;<a href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a></p>
+<p>
+	Using this plugin allows to run animations directly from jQuery but running CSS3 based animations which makes the animition handling more flexible and performant at the same time.</p>
+<p>
+	This plugin is used in the following JS modules</p>
+<p>
+	- <strong>dropdown-animate</strong>: Allow to animate the dropdown when it opens. You see a demostration in the page dropdown-animations.html</p>
+<p>
+	-&nbsp;<strong>panel-perform</strong>: Allows to animate a panel when it is destroyed by clicking on the cross icon.</p>
+<p>
+	- <strong>play-animation</strong>: This component allows to play animation in an element using another element as a trigger via the click event or by setting an offset so the element animates when it becomes visible when scrolling.</p>
+<h4 id="components_utilities">Utilities</h4>
+<p>
+	This components is a set of CSS classes that helps to create different element or changes a default behavior just adding the class.&nbsp;<br>
+	This classes are defined in the file <strong>utils.less or app.css&nbsp;</strong>and they are most used in the creation of widgets.&nbsp;</p>
+<p>
+	Example of utilities classes are for clearing margins or add different margins sizes. Same for padding, and also you can set different background colors or text color</p>
+<h4 id="components_charts">Charts</h4>
+<p>
+	Chart system is based on the plugin <a href="http://www.flotcharts.org/">Flot Charts</a></p>
+<p>
+	According to the type of chart you want to display, you must provide a set of values so the chart can display it. This set of values are usually stores in database or a file in the server. Because of that, there are PHP files created to server the information for each chart via AJAX POST requests using the JSON format.</p>
+<p>
+	Every time a page with a chart is loaded, the script&nbsp;<strong>flot-chart.js</strong> find the chart elements and request a content for that chart via AJAX POST, this script uses an object defined which does the ajax request, and after receive the data it inits the corresponding chart.</p>
+<p>
+	This is an example markup of a chart</p>
+<pre class="prettyprint lang-html linenums">
+<span class="webkit-html-tag" style="font-family: monospace; font-size: medium; white-space: pre-wrap;">&lt;div <span class="webkit-html-attribute-name">style</span>=&quot;<span class="webkit-html-attribute-value">height: 250px;</span>&quot; <span class="webkit-html-attribute-name">data-source</span>=&quot;<span class="webkit-html-attribute-value">server/chart-data.php?type=area</span>&quot; <span class="webkit-html-attribute-name">class</span>=&quot;<span class="webkit-html-attribute-value">chart-area flot-chart</span>&quot;&gt;</span><span class="webkit-html-tag" style="font-family: monospace; font-size: medium; white-space: pre-wrap;">&lt;/div&gt;</span></pre>
+<p>
+	As you can see you have to define a <strong>height</strong>, <strong>classnames </strong>to target a particular type of chart and the <strong>data-source</strong>.<br>
+	The <strong>data-source </strong>is the PHP script location that returns the data in JSON format</p>
+<p>
+	There is one main PHP file&nbsp;<strong>chart-data.php</strong> that routes the request to the corresponding PHP script to return the right data for the chart.<br>
+	You only need to copy or edit the content a some of the files named&nbsp;<strong>chart-data-*.php </strong>according to your needs to populate the charts in the page.</p>
+<p>
+	<strong>Loading from JSON files</strong></p>
+<p>
+	To load from a JSON file directly just put the URL to the json file in the data-source attribute like follows</p>
+<pre class="prettyprint lang-html linenums">
+<span class="webkit-html-tag" style="font-size: medium; white-space: pre-wrap;">&lt;div <span class="webkit-html-attribute-name">style</span>=&quot;<span class="webkit-html-attribute-value">height: 250px;</span>&quot; <span class="webkit-html-attribute-name">data-source</span>=&quot;<span class="webkit-html-attribute-value">server/chart-data-donut.json</span>&quot; <span class="webkit-html-attribute-name">class</span>=&quot;<span class="webkit-html-attribute-value">chart-area flot-chart</span>&quot;&gt;</span><span class="webkit-html-tag" style="font-size: medium; white-space: pre-wrap;">&lt;/div&gt;</span></pre>
+<p>
+	&nbsp;</p>
+<div class="alert alert-error">
+	Due to the need of a PHP backend, you need to run the demo using a <strong>server</strong> to populate the charts correctly.</div>
+<p>
+	&nbsp;</p>
+<h4 id="components_file_upload">File Upload</h4>
+<p>
+	The file upload component is handlded by a compoent from the framework <a href="http://getuikit.com/docs/addons_upload.html">UIKIT</a>&nbsp;which can handle upload inputs and also uploas via drag-drop zones</p>
+<p>
+	The JS script for this component is upload-demo.js and like the name says, this files is a demostration and guid of how to implement your own file upload.</p>
+<p>
+	There is also a file in the server folder upload.php which gets the uploaded file information and save its content to the right location.</p>
+<p>
+	The save feature is commented so you need to uncomment and edit to set the directories where your uploaded files should be located.</p>
+<p>
+	The php script has many consideration regarding to security issues so is preferable to avoid making many changes</p>
+<h4 id="components_slim_scroll">Slim Scroll</h4>
+<p>
+	The slimcroll plugin is used to simulate a scroll bar inside custom components. To use it only wrap the component in the following markup</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;scroll-viewport&quot;&gt;
+  &lt;div class=&quot;scroll-content&quot;&gt;
+    # component content here
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+	&nbsp;</p>
+<h4 id="components_masonry_grid">Masonry Grid</h4>
+<p>
+	The masonry grid is a grid that allows to convert a list of items into a column layout. This component is based on CSS3 Columns layout &nbsp;(<a href="http://caniuse.com/multicolumn">support</a>).&nbsp;<br>
+	The grid is &quot;mobile first&quot; and the number of columns can vary from one device to another with max of <strong>12 columns</strong>.</p>
+<p>
+	To use the masonry grid add the following markup</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;row-masonry row-masonry-lg-4&quot;&gt;
+  &lt;div class=&quot;col-masonry&quot;&gt;
+    # first column
+  &lt;/div&gt;
+  &lt;div class=&quot;col-masonry&quot;&gt;
+    # another column
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+	Note that you can use the responsive columns in a similar way like Bootstrap grid does</p>
+<p>
+	<strong>.row-masonry-xl-*&nbsp;</strong>For large desktops resolutions</p>
+<p>
+	<strong>.row-masonry-lg-*</strong> From normal desktop and above</p>
+<p>
+	<strong>.row-masonry-md-*&nbsp;</strong>From tablet devices&nbsp;and above</p>
+<p>
+	<strong>.row-masonry-sm-*&nbsp;</strong>From mobiles and above</p>
+<div class="alert alert-info">
+	Under mobile, all columns stacks automatically.</div>
+<p>
+	&nbsp;</p>
+<h4 id="components_datatables">Datatables</h4>
+<p>
+	DataTables is a very flexible, advanced tables plugin for jQuery. This items uses a specialized version of DataTables built for Bootstrap 3. For complete documentation on DataTables, visit their website at https://datatables.net/.</p>
+<p>
+	Datatables supports extension to add more usability features.<br>
+	This item includes the following usage modes</p>
+<p>
+	<strong>- Zero configuration</strong>: This is basic usage, which adds a select to change the number of row to display, an input to filter the content displayed and a pagination. All elements based on Bootstrap classes.</p>
+<p>
+	- <strong>Column Filtering</strong>: allows to use a text input below each columns to filter the table content by adding diferent filters by columns.</p>
+<p>
+	- <strong>Column Visibility</strong>: allows the user to chose via a dropdown the columns to be displayed by the table dinamically.&nbsp;</p>
+<p>
+	Each different usage includes the plugins invocation plus a set of options to add one level more of customization like text translation.</p>
+<p>
+	&nbsp;</p>
+<h4 id="components_google_maps">Google Maps</h4>
+<p>
+	The Google Maps script support the following data attributes which are the most used when customizing a map. If you need more customization edit directly the plugin options.</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;gmap&quot; 
+     data-toggle=&quot;gmap&quot; 
+     data-address=&quot;address-1; address-2&quot; 
+     data-title=&quot;title-for-address-1;title-for-address-2&quot; 
+     data-maptype=&quot;ROADMAP&quot; 
+     data-styled 
+     data-zoom=&quot;14&quot; &gt;&lt;/div&gt;</pre>
+<p>
+	&nbsp;</p>
+<p>
+	The class .<strong>gmap </strong>is required to set a height for the map. Google needs a height at least so you can use any other class that provides a height for the element.</p>
+<p>
+	Data attributes</p>
+<p>
+	<strong>data-toggle=&quot;gmap&quot;</strong> indicates the element must be handled by the Google Map script</p>
+<p>
+	<strong>data-address</strong> indicates the address(es) you want to display. Multiple address can be separated by ;</p>
+<p>
+	<strong>data-title&nbsp;</strong>indicates the text for the popover for each address. Multiple title can be separated by ; and each one will be associated with the respective address in the same order as defined</p>
+<p>
+	<strong>data-zoom: </strong>change the zoom of the map 0 - 19</p>
+<p>
+	<strong>data-maptype:</strong> The type of map. ROADMAP or TERRAIN or SATELLITE</p>
+<p>
+	<strong>data-styled</strong>&nbsp;No value required. If present the map will be styled using the styles arrays defined in the Google Map script.</p>
+<p>
+	&nbsp;</p>
+<h4 id="components_full_calendar">Full Calendar</h4>
+<p>
+	This item include the full calender plugin wrapped into a classic application to manage events. This app is intentended to show how to work with the most common features that full calendar provides. You can find more on its website at&nbsp;<a href="http://arshaw.com/fullcalendar/docs/">http://arshaw.com/fullcalendar/docs/</a></p>
+<p>
+	The full calendar app is contained in the js module <strong>calendar.js</strong> and the execution is in 3 steps.</p>
+<p>
+	1- <strong>createDemoEvents</strong>() This function prepares the events data to be displayed when the calendar&nbsp;inits. You can wrap into this function a request to a source to get via ajax the stored events</p>
+<p>
+	2-&nbsp;<strong>initExternalEvents()&nbsp;</strong>attaches all necessary events to the left panel to add, remove and drag/drop events into the calendar</p>
+<p>
+	3-&nbsp;<strong>initCalendar()&nbsp;</strong>this function finally invokes the calendar plugin and displays the events loaded from the source. This function also contains the drop handler to know when an event has been dragged/droppped into the calendar.</p>
+<p>
+	At last, the&nbsp;<strong>ExternalEvent</strong>&nbsp;object is used to handle external events by adding draggable functionaly and the internal event data.</p>
+<p>
+	All functions above must run inside the document ready event to ensure a correct elements detection.</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="credits">
+	<div class="page-header"><h3>Credits</h3><hr class="notop"></div>
+<p>
+	The following projects has been used in this item</p>
+<div>
+	http://labs.bigroomstudios.com/libraries/animo-js</div>
+<div>
+	http://daneden.github.io/animate.css/</div>
+<div>
+	http://getbootstrap.com/</div>
+<div>
+	http://harvesthq.github.io/chosen/</div>
+<div>
+	http://codemirror.net/</div>
+<div>
+	http://tarruda.github.io/bootstrap-datetimepicker/</div>
+<div>
+	https://github.com/ftlabs/fastclick</div>
+<div>
+	http://markusslima.github.io/bootstrap-filestyle/</div>
+<div>
+	http://www.flotcharts.org/</div>
+<div>
+	http://fortawesome.github.io/Font-Awesome/icons/</div>
+<div>
+	http://github.com/marioestrada/jQuery-gMap</div>
+<div>
+	http://jquery.com/</div>
+<div>
+	https://github.com/chjj/marked</div>
+<div>
+	http://modernizr.com/</div>
+<div>
+	http://momentjs.com/</div>
+<div>
+	http://parsleyjs.org/</div>
+<div>
+	http://www.eyecon.ro/bootstrap-slider</div>
+<div>
+	http://omnipotent.net/jquery.sparkline/#s-about</div>
+<div>
+	http://timschlechter.github.io/bootstrap-tagsinput/examples/bootstrap3/</div>
+<div>
+	http://rocha.la/jQuery-slimScroll</div>
+<div>
+	https://datatables.net/.</div>
+<div>
+	https://github.com/marioestrada/jQuery-gMap</div>
+<div>
+	http://arshaw.com/fullcalendar/docs/</div>
+<div>
+	http://jh3y.github.io/-cs-spinner/</div>
+<div>
+	https://github.com/RobinHerbots/jquery.inputmask</div>
+<div>
+	&nbsp;</div>
+<div>
+	Modified element from UIKIT framework</div>
+<div>
+	&nbsp;</div>
+<div>
+	http://www.getuikit.com/docs/addons_upload.html</div>
+<div>
+	http://www.getuikit.com/docs/addons_notify.html</div>
+<div>
+	http://www.getuikit.com/docs/addons_markdownarea.html</div>
+<div>
+	&nbsp;</div>
+<div>
+	Demo Images from</div>
+<div>
+	&nbsp;</div>
+<div>
+	http://randomuser.me/</div>
+<div>
+	http://unsplash.com/</div>
+</section>
+
+
+
+    <hr />
+
+<footer>
+    <p>Copyright @geedmo 2014 made with the <a href="http://rxa.li/documenter">Documenter v2.0</a></p>
+</footer>
+
+</div><!-- /container --> 
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script>document.createElement('section');var duration='500',easing='swing';</script>
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/jquery.scrollTo.js"></script>
+<script src="assets/js/jquery.easing.js"></script>
+<script src="assets/js/scripts.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-min.js"></script> 
+</body>
+</html>

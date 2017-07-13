@@ -1,0 +1,75 @@
+//- 
+  Use this file to configure the sidebar menu
+  Structure:
+    menu {
+      href: the link target location
+      icon: the class name of the icon 
+      active: 1 active | 0 inactive
+      S: submenu object with same structure like described above
+    }
+
+- var menu = {}
+
+- menu['Dashboard']                      = { href: "dashboard.html", icon: 'fa fa-dashboard', active: 0, alert: "12", S: {} };
+- menu['Dashboard']['S']['Default']      = { href: "dashboard.html", active: 0 };
+- menu['Dashboard']['S']['No Sidebar']   = { href: "dashboard-nosidebar.html", active: 0, alert: "new" };
+- menu['Dashboard']['S']['No Profile']   = { href: "dashboard-noprofile.html", active: 0, alert: "new" };
+
+- menu['Charts']                         = { href: "#", icon: 'fa fa-bar-chart-o', active: 0, S: {} };
+- menu['Charts']['S']['Flot']            = { href: "chart-flot.html", active: 0 };
+- menu['Charts']['S']['Radial']          = { href: "chart-radial.html", active: 0 };
+
+- menu['Tables']                         = { href: "#", icon: 'fa fa-table', active: 0, S: {} };
+- menu['Tables']['S']['Data Table']      = { href: "table-datatable.html", active: 0};
+- menu['Tables']['S']['Standard']        = { href: "table-standard.html", active: 0 };
+- menu['Tables']['S']['Extended']        = { href: "table-extended.html", active: 0 };
+
+- menu['Forms']                          = { href: "#", icon: 'fa fa-edit',  active: 0, S: {} };
+- menu['Forms']['S']['Standard']         = { href: "form-standard.html", active: 0 };
+- menu['Forms']['S']['Extended']         = { href: "form-extended.html", active: 0, alert: "new" };
+- menu['Forms']['S']['Validation']       = { href: "form-validation.html", active: 0 };
+
+- menu['Elements']                       = { href: "#", icon: 'fa fa-wrench', active: 0, S: {} };
+- menu['Elements']['S']['Panels']        = { href: "panels.html", active: 0, alert: "new" };
+- menu['Elements']['S']['Portlets']      = { href: "portlets.html", active: 0};
+- menu['Elements']['S']['Buttons']       = { href: "button.html", active: 0 };
+- menu['Elements']['S']['Icons']         = { href: "icons.html", active: 0, alert: "+400" };
+- menu['Elements']['S']['Notifications'] = { href: "notifications.html", active: 0 };
+- menu['Elements']['S']['Typography']    = { href: "typo.html", active: 0 };
+- menu['Elements']['S']['Grid']          = { href: "grid.html", active: 0 };
+- menu['Elements']['S']['Grid Masonry']  = { href: "grid-masonry.html", active: 0};
+- menu['Elements']['S']['Animations']    = { href: "animations.html", active: 0 };
+- menu['Elements']['S']['Dropdown']      = { href: "dropdown-animations.html", active: 0 };
+- menu['Elements']['S']['Widgets']       = { href: "widgets.html", active: 0 };
+- menu['Elements']['S']['Maps']          = { href: "maps.html", active: 0};
+- menu['Elements']['S']['Calendar']      = { href: "calendar.html", active: 0};
+- menu['Elements']['S']['Spinners']      = { href: "spinners.html", active: 0, alert: "new"};
+
+- menu['Pages']                          = { href: "#", icon: 'fa fa-file-text', active: 0, S: {}, alert: "new"};
+- menu['Pages']['S']['Landing']          = { href: "pages/landing.html", active: 0 };
+- menu['Pages']['S']['Login']            = { href: "pages/login.html", active: 0 };
+- menu['Pages']['S']['Login Multi']      = { href: "pages/login-multi.html", active: 0 };
+- menu['Pages']['S']['Sign up']          = { href: "pages/signup.html", active: 0 };
+- menu['Pages']['S']['Lock']             = { href: "pages/lock.html", active: 0 };
+- menu['Pages']['S']['Recover Password'] = { href: "pages/recover.html", active: 0 };
+- menu['Pages']['S']['Empty Template']   = { href: "template.html", active: 0 };
+- menu['Pages']['S']['Timeline']         = { href: "timeline.html", active: 0 };
+
+//- This mixin iterates over the configuration array 
+//- and prints the menu items
+mixin build-menu-items(items)
+  each val, key in items
+    li(class=val.active?'active':'')
+      - has_submenu = !!val.S
+      a(href=val.href, title=key, data-toggle=(has_submenu?"collapse-next":""), class=(has_submenu?"has-submenu":"no-submenu"))
+        if ( val.icon )
+          em(class=val.icon)
+        if ( val.alert )
+          .label.label-primary.pull-right= val.alert
+        span.item-text= key
+
+      if (has_submenu)
+        // START SubMenu item
+        ul(class="nav collapse " + (val.active?'in':''))
+          +build-menu-items(val.S)
+        // END SubMenu item

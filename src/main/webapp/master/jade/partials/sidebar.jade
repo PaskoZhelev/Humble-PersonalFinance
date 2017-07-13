@@ -1,0 +1,68 @@
+
+
+// START Sidebar (left)
+nav.sidebar
+  ul.nav
+    block menu-profile
+      // START user info
+      li
+        .item.user-block(data-toggle="collapse-next", class="has-submenu")
+          // User picture
+          .user-block-picture
+            img.img-thumbnail.img-circle(src='app/img/user/02.jpg', alt="Avatar", width="60", height="60")
+            // Status when collapsed
+            .user-block-status
+              .point.point-success.point-lg
+          // Name and Role
+          .user-block-info
+            span.user-block-name.item-text Welcome, Alex
+            span.user-block-role Designer
+            // START Dropdown to change status
+            .btn-group.user-block-status
+              button.btn.btn-xs.dropdown-toggle(type="button", data-toggle='dropdown', data-play="fadeIn", data-duration="0.2") 
+                .point.point-success
+                |  Online 
+              ul.dropdown-menu.text-left.pull-right
+                li: a(href='#') 
+                  .point.point-success
+                  |  Online
+                li: a(href='#') 
+                  .point.point-warning
+                  |  Away
+                li: a(href='#') 
+                  .point.point-danger
+                  |  Busy
+            // END Dropdown to change status
+        // START User links collapse
+        ul.nav.collapse
+          li: a(href="#") Profile
+          li: a(href="#") Settings
+          li: a(href="#") Notifications
+            .label.label-danger.pull-right 120
+          li: a(href="#") Messages
+            .label.label-success.pull-right 300
+          li.divider
+          li: a(href="#") Logout
+        // END User links collapse
+      
+      // END user info
+    
+    // START Menu
+    +build-menu-items(menu)
+    // END Menu
+  
+    // Sidebar footer    
+    li.nav-footer
+      .nav-footer-divider
+      // START button group
+      .btn-group.text-center
+        button(type="button", data-toggle="tooltip", data-title="Add Contact").btn.btn-link
+          em.fa.fa-user.text-muted
+            sup.fa.fa-plus
+        button(type="button", data-toggle="tooltip", data-title="Settings").btn.btn-link
+          em.fa.fa-cog.text-muted
+        button(type="button", data-toggle="tooltip", data-title="Logout").btn.btn-link
+          em.fa.fa-sign-out.text-muted
+      // END button group
+
+// END Sidebar (left)

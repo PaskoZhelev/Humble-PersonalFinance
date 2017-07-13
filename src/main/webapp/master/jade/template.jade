@@ -1,0 +1,17 @@
+//- Extends the admin layout
+extends layout/main-layout
+
+block active-item
+  //- Activate here the item
+  - menu['Pages']['active'] = 1
+  - menu['Pages']['S']['Empty Template']['active'] = 1
+
+block content
+  
+  h3 Page title
+    br
+    small Subtitle
+
+  .row
+    .col-lg-12
+      p A row with content

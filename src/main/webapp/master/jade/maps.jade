@@ -1,0 +1,41 @@
+extends layout/main-layout
+
+block active-item
+  - menu['Elements']['active'] = 1
+  - menu['Elements']['S']['Maps']['active'] = 1
+
+block content
+  
+  h3 Google Maps
+    br
+    small Easy usage directly from data attribute
+
+  .row
+    .col-md-6
+      .panel.panel-default
+        .panel-heading Classic Map
+        .panel-body
+          .gmap(data-toggle="gmap", data-address="Little Lonsdale St, Melbourne, Victoria 8011 Australia")
+    .col-md-6
+      .panel.panel-default
+        .panel-heading Custom zoom
+        .panel-body
+          .gmap(data-toggle="gmap", data-address="Little Lonsdale St, Melbourne, Victoria 8011 Australia", data-zoom="19")
+  .row
+    .col-md-6
+      .panel.panel-default
+        .panel-heading Different Map Type
+        .panel-body
+          .gmap(data-toggle="gmap", data-address="Little Lonsdale St, Melbourne, Victoria 8011 Australia", data-maptype="SATELLITE")
+    .col-md-6
+      .panel.panel-default
+        .panel-heading Multiple Addresses
+        .panel-body
+          .gmap(data-toggle="gmap", data-address="Little Lonsdale St, Melbourne, Victoria 8011 Australia; 2 Elizabeth St, Melbourne, Victoria 3000 Australia", data-title="Location 1; Location 2")
+
+  .row
+    .col-md-12
+      .panel.panel-default
+        .panel-heading Styled Maps
+        .panel-body
+          .gmap(data-toggle="gmap", data-address="Little Lonsdale St, Melbourne, Victoria 8011 Australia", data-maptype="ROADMAP", data-styled)

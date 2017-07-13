@@ -1,0 +1,83 @@
+<!-- START aside-->
+      <aside class="aside">
+         <!-- START Sidebar (left)-->
+         <nav class="sidebar">
+            <ul class="nav">
+               <!-- START user info-->
+               <li>
+                  <div data-toggle="collapse-next" class="item user-block has-submenu">
+                     <!-- User picture-->
+                     <div class="user-block-picture">
+                        <img src="app/img/user/14.jpg" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle">
+                        <!-- Status when collapsed-->
+                        <div class="user-block-status">
+                           <div class="point point-success point-lg"></div>
+                        </div>
+                     </div>
+                     <!-- Name and Role-->
+                     <div class="user-block-info">
+                        <span class="user-block-name item-text">Hello, ${username}</span>
+                        <span class="user-block-role">Administrator</span>
+                        <!-- START Dropdown to change status-->
+                        <div class="btn-group user-block-status">
+                           <button type="button" data-toggle="dropdown" data-play="fadeIn" data-duration="0.2" class="btn btn-xs dropdown-toggle">
+                              <div class="point point-success"></div>Online</button>
+                           <ul class="dropdown-menu text-left pull-right">
+                              <li>
+                                 <a href="#">
+                                    <div class="point point-success"></div>Online</a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                    <div class="point point-warning"></div>Away</a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                    <div class="point point-danger"></div>Busy</a>
+                              </li>
+                           </ul>
+                        </div>
+                        <!-- END Dropdown to change status-->
+                     </div>
+                  </div>
+               </li>
+               <!-- END user info-->
+               <!-- START Menu-->
+                <li>
+                  <a href="/home" title="Dashboard"  >
+                     <em class="fa fa-bar-chart-o"></em>                    
+                     <span class="item-text">Dashboard</span>
+                  </a>
+                  <!-- START SubMenu item-->
+                  <!-- END SubMenu item-->
+               </li>
+               <li>
+                  <a href="/add-cash" title="Add Cash" >
+                     <em class="fa fa-money"></em>
+                     <span class="item-text">Add Cash</span>
+                  </a>
+                </li>
+                 <li>
+                  <a href="/settings" title="Settings" >
+                     <em class="fa fa-gear"></em>
+                     <span class="item-text">Settings</span>
+                  </a>
+                </li>
+                  <!-- START SubMenu item-->
+                  
+               <!-- END Menu-->
+               <!-- Sidebar footer    -->
+               <li class="nav-footer">
+                  <div class="nav-footer-divider"></div>
+                  <!-- START button group-->
+                  <div class="btn-group text-center">                     
+                     <a href="/logout"><button type="button" data-toggle="tooltip" data-title="Logout" class="btn btn-link">
+                        <em class="fa fa-sign-out text-muted"></em>
+                     </button></a>
+                  </div>
+                  <!-- END button group-->
+               </li>
+            </ul>
+         </nav>
+         <!-- END Sidebar (left)-->
+      </aside>

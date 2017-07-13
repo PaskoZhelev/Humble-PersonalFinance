@@ -1,0 +1,275 @@
+//- Extends the page layout
+extends ../layout/page-layout
+
+block head
+  link(rel='stylesheet', href='../app/css/landing.css')
+
+block content
+
+  header
+
+    .container
+      nav.row
+        .col-md-2.app-logo
+          a.logo-wrapper(href='#')
+            img.img-responsive(src="../app/img/logo2.png", alt="App Name")
+        .col-md-10
+          ul.list-inline.app-buttons
+            li: a(href="#").btn.btn-primary.btn-fw: strong Demo
+            li: a(href="#").btn.btn-green.btn-fw: strong Purchase
+      .header-content
+        .row.row-flush.row-table
+          .col-xs-12.col-lg-6.align-middle
+            .browser-presentation(data-toggle="play-animation",data-play="fadeInLeft",data-offset="0")
+              img.img-responsive(src="../app/img/landing/chrome-app.png", alt="App Name")
+          .col-xs-12.col-lg-6.align-middle
+            .side-presentation
+              h1.text-lg EYECATCHING BOOTSTRAP 3 ADMIN
+              p.lead Get your app frontend done fast with this complete bootstrap theme.
+              ul.list-inline.store-list
+                li
+                  a(href="#"): img.img-responsive(src="../app/img/landing/store-apple.png", alt="App Name")
+                li
+                  a(href="#"): img.img-responsive(src="../app/img/landing/store-google.png", alt="App Name")
+              p.lead Want to know first?
+              p
+                a(href="#").btn.btn-primary.btn-lg.btn-fw: strong Discover Now
+  
+  section#clients
+    .container
+      h2.section-header Working with the best
+        br
+        small.text-muted.text-center 47Admin makes your life easier. The best choice for your next project.
+      .row
+        .col-lg-2.col-md-4.col-xs-6
+          img.img-responsive(src="../app/img/landing/clients/jquery.png",alt="client")
+        .col-lg-2.col-md-4.col-xs-6
+          img.img-responsive(src="../app/img/landing/clients/node.png",alt="client")
+        .col-lg-2.col-md-4.col-xs-6
+          img.img-responsive(src="../app/img/landing/clients/gulp.png",alt="client")
+        .col-lg-2.col-md-4.col-xs-6
+          img.img-responsive(src="../app/img/landing/clients/jade.png",alt="client")
+        .col-lg-2.col-md-4.col-xs-6
+          img.img-responsive(src="../app/img/landing/clients/less.png",alt="client")
+        .col-lg-2.col-md-4.col-xs-6
+          img.img-responsive(src="../app/img/landing/clients/bootstrap.png",alt="client")
+
+  section.bg-white
+    .container
+      .row
+        .col-lg-6
+          h2.page-header Multipurpose admin app
+          p Find the perfect solution for most of your proyect. Get covered by the features that this app provides. 
+          p Make 
+            strong 47Admin 
+            | the starpoint of your next web app.
+          p Try out the demo 
+          br
+          p
+            a(href="#").btn.btn-success: strong Start Demo Now
+        .col-lg-6(data-toggle="play-animation",data-play="fadeInRight",data-offset="-250")
+          img.img-responsive(src="../app/img/landing/app-multi.png", alt="App Name")
+  section
+    .container
+      .row
+        .col-lg-6(data-toggle="play-animation",data-play="fadeInLeft",data-offset="-250")
+          img.img-responsive(src="../app/img/landing/app-chart.png", alt="App Name")
+        .col-lg-6
+          h2.page-header Powered by Flot Charts
+          p Present your app information in a simple and easy to understand way. Display any data set with Flot Charts.
+          p 47Admin includes Area Charts, Simple and Stacked Bar Charts, Line Charts and Pie and Donuts Charts.
+          p Customize the chart by simpli editing a PHP file or provide a json file on every request.
+  section.bg-white
+    .container
+      .row
+        .col-lg-6
+          h2.page-header Widgetize your App
+          p 47Admin comes with a full set of utility classes ready to create widgets for your app. 
+          p Compress your user information in a single panel y customize the elements inside.
+          p All components are responsive and ready for mobile devices.
+          br
+          p
+            a(href="#").btn.btn-green: strong Watch Now
+        .col-lg-6(data-toggle="play-animation",data-play="fadeInRight",data-offset="-250")
+          img.img-responsive(src="../app/img/landing/app-widget.png", alt="App Name")
+
+  section#testimonial.bg-primary
+    .container
+      #carousel-testimonial.carousel.slide(data-ride='carousel')
+        // Indicators 
+        ol.carousel-indicators
+          li.active(data-target='#carousel-testimonial', data-slide-to='0')
+          li(data-target='#carousel-testimonial', data-slide-to='1')
+          li(data-target='#carousel-testimonial', data-slide-to='2')
+        // Wrapper for slides 
+        .carousel-inner
+          .item.active
+            .row
+              .col-xs-8.col-xs-offset-2
+                h4: em Etiam id nunc felis. Quisque quam turpis, viverra sit amet auctor laoreet, aliquam vitae neque.  Integer sagittis ultricies neque vitae suscipit. Integer ut convallis dui. Praesent vel nisi nibh. Nunc lacinia, sem ac laoreet egestas, risus lacus vulputate dui, quis pellentesque eros est id nisi. 
+                p: strong - John Titor
+          .item
+            .row
+              .col-xs-8.col-xs-offset-2
+                h4: em Etiam id nunc felis. Quisque quam turpis, viverra sit amet auctor laoreet, aliquam vitae neque.  Integer sagittis ultricies neque vitae suscipit. Integer ut convallis dui. Praesent vel nisi nibh. Nunc lacinia, sem ac laoreet egestas, risus lacus vulputate dui, quis pellentesque eros est id nisi. 
+                p: strong - Mary Mayer
+          .item
+            .row
+              .col-xs-8.col-xs-offset-2
+                h4: em Quisque non lacinia lacus. Pellentesque odio purus, egestas ac luctus gravida, rutrum ut quam. Quisque quam turpis, viverra sit amet auctor laoreet, aliquam vitae neque. Curabitur nec congue erat. Aliquam erat volutpat. Phasellus ullamcorper rhoncus sagittis. Sed vestibulum quam ut arcu tempus sed placerat nibh venenatis. 
+                p: strong -  John Mayer
+        // Controls 
+        a.left.carousel-control(href='#carousel-testimonial', data-slide='prev')
+          em.fa.fa-chevron-circle-left
+        a.right.carousel-control(href='#carousel-testimonial', data-slide='next')
+          em.fa.fa-chevron-circle-right
+
+
+  section.bg-white
+    .container
+      h2.section-header(data-toggle="play-animation",data-play="fadeInUp",data-offset="0") Tons of features
+        br
+        small.text-muted.text-center 47Admin comes packed with tons of feature ready to use.
+      .row
+        .col-lg-3
+          ul.feature-list
+            li(data-toggle="play-animation",data-play="fadeInUp",data-offset="0")
+              h4
+                span.point.point-primary.point-lg
+                | Data Tables
+              p Quisque luctus vehicula massa quis ultrices. Nunc et magna in metus pharetra ultricies ac sit amet justo. 
+            li(data-toggle="play-animation",data-play="fadeInUp",data-offset="0")
+              h4
+                span.point.point-primary.point-lg
+                | Form Validation
+              p Cras dolor ligula, laoreet ac vestibulum sed, molestie id odio. Donec convallis arcu sit amet tortor sagittis in convallis metus facilisis. 
+            li(data-toggle="play-animation",data-play="fadeInUp",data-offset="0")
+              h4
+                span.point.point-primary.point-lg
+                | Portlets
+              p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In ante nisi, mollis nec egestas eget, viverra in mi. 
+            li(data-toggle="play-animation",data-play="fadeInUp",data-offset="0")
+              h4
+                span.point.point-primary.point-lg
+                | Masonry Grid
+              p Quisque et nulla in tortor posuere accumsan eget non magna. Vestibulum a ipsum lectus, ac congue sapien. 
+        .col-lg-6
+          img.img-responsive(src="../app/img/landing/app-mobile.png", alt="App Name")
+        .col-lg-3
+          ul.feature-list
+            li(data-toggle="play-animation",data-play="fadeInUp",data-offset="0")
+              h4
+                span.point.point-primary.point-lg
+                | CSS3 Animations
+              p Quisque luctus vehicula massa quis ultrices. Nunc et magna in metus pharetra ultricies ac sit amet justo. 
+            li(data-toggle="play-animation",data-play="fadeInUp",data-offset="0")
+              h4
+                span.point.point-primary.point-lg
+                | Charts
+              p Cras dolor ligula, laoreet ac vestibulum sed, molestie id odio. Donec convallis arcu sit amet tortor sagittis in convallis metus facilisis. 
+            li(data-toggle="play-animation",data-play="fadeInUp",data-offset="0")
+              h4
+                span.point.point-primary.point-lg
+                | Google Maps
+              p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In ante nisi, mollis nec egestas eget, viverra in mi. 
+            li(data-toggle="play-animation",data-play="fadeInUp",data-offset="0")
+              h4
+                span.point.point-primary.point-lg
+                | Full Calendar
+              p Quisque et nulla in tortor posuere accumsan eget non magna. Vestibulum a ipsum lectus, ac congue sapien. 
+
+  section#callout
+    .container.text-center(data-toggle="play-animation",data-play="fadeInLeftBig",data-offset="-200")
+      h1 Ready to start? Try this App today
+      h4
+        | And see why people around the world choose this APP to create great cross-platform websites
+
+      ul.list-inline.store-list
+        li
+          a(href="#"): img.img-responsive(src="../app/img/landing/store-apple.png", alt="App Name")
+        li
+          a(href="#"): img.img-responsive(src="../app/img/landing/store-google.png", alt="App Name")
+      p
+        br
+        a.btn.btn-primary.btn-large.btn-oval(href='#', style="width: 180px"): strong Sign up Now!
+
+  footer.footer-1.bg-inverse
+    .container
+      .row
+        .col-sm-2.col-xs-6
+          nav
+            h5 PRODUCT
+            ul.list-unstyled
+              li
+                a(href='#') Documentation
+              li
+                a(href='#') Customers
+              li
+                a(href='#') Tour
+              li
+                a(href='#') Pricing
+        .col-sm-2.col-xs-6
+          nav
+            h5 CONTACT
+            ul.list-unstyled
+              li
+                a(href='#') Support
+              li
+                a(href='#') Sales
+              li
+                a(href='#') Forum
+              li
+                a(href='#') Blog
+        .col-sm-2.col-xs-6
+          nav
+            h5 COMPANY
+            ul.list-unstyled
+              li
+                a(href='#') About
+              li
+                a(href='#') Press Kit
+              li
+                a(href='#') Education
+              li
+                a(href='#') Non-profits
+        .col-sm-2.col-xs-6
+          nav
+            h5 Say HELLO
+            ul.list-unstyled
+              li
+                a(href='#') Twitter
+              li
+                a(href='#') Facebook
+              li
+                a(href='#') Google+
+              li
+                a(href='#') Blog
+        .col-lg-4.col-xs-12
+          form(action='', method='post')
+            h5 SUBSCRIBE TO OUR NEWSLETTER!
+            .input-group
+              input.form-control(type='email', name='email', placeholder='mail@example.com', required='')
+              span.input-group-btn
+                button.btn.btn-success(type='submit') Join
+            //
+               /input-group 
+          p.text-muted
+            small We will never send spam and you can unsubscribe any time
+
+  footer.footer-2
+    .container
+      .row
+        .col-lg-4
+          p
+            | Copyright 2014 | 
+            a(href='#') Terms of Service 
+            | | 
+            a(href='#') Privacy Policy
+        .col-lg-4.logo-column
+          a.logo-wrapper(href='#')
+            img.img-responsive(src="../app/img/logo2.png", alt="App Name")
+        .col-lg-4
+          p
+            | Crafted with 
+            em.fa.fa-heart.text-danger.fa-fw
+            |   from Buenos Aires, Argentina.

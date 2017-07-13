@@ -1,0 +1,22 @@
+{
+  "name": "47admin",
+  "version": "1.0.0",
+  "description": "Admin Bootstrap Skin",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.6.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-concat": "^2.2.0",
+    "gulp-uglify": "^0.2.1",
+    "gulp-jade": "^0.4.2",
+    "gulp-less": "^1.2.3",
+    "gulp-livereload": "~0.2.0",
+    "tiny-lr": "0.0.5",
+    "marked": "~0.3.0",
+    "gulp-embedlr": "^0.5.2",
+    "gulp-changed": "^0.3.0",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-htmlhint": "0.0.7"
+  },
+  "author": "@geedmo"
+}

@@ -1,0 +1,52 @@
+doctype html
+<!--[if lt IE 7]> <html class="ie ie6 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie ie7 lt-ie9 lt-ie8"        lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie ie8 lt-ie9"               lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie ie9"                      lang="en"> <![endif]-->
+<!--[if !IE]><!-->
+html.no-ie(lang="en")
+  <!--<![endif]-->
+  head
+
+    include ../partials/sidebar-config
+
+    block active-item
+      //- Use this block to activate menu items
+      //- to highlight links and load custom assets
+      
+    include ../partials/head
+
+  body
+
+    // START Main wrapper
+    section.wrapper
+      
+      include ../partials/top-navbar
+      
+      // START aside
+      aside.aside
+        include ../partials/sidebar
+      // End aside
+      
+      block offsidebar
+        // START aside
+        aside.offsidebar
+          include ../partials/offsidebar
+        // END aside
+
+      // START Main section
+      section
+        // START Page content
+        section.main-content
+          block content
+        // END Page content
+      // END Main section
+    
+    // END Main wrapper
+
+    block body_child
+      //- Use this block to place element as body child (eg modal)
+    
+    // START Scripts
+    include ../partials/scripts
+    // END Scripts

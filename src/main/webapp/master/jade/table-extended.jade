@@ -1,0 +1,379 @@
+extends layout/main-layout
+
+block active-item
+  - menu['Tables']['active'] = 1
+  - menu['Tables']['S']['Extended']['active'] = 1
+
+block content
+  
+  h3 Tables
+    br
+    small A showcase of different components inside tables
+
+  // START panel
+  .panel.panel-default
+    .panel-heading
+      | Demo Table #1
+      a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right
+        em.fa.fa-times
+      a(href="#", data-perform="panel-collapse", data-toggle="tooltip", title="Collapse Panel").pull-right
+        em.fa.fa-minus
+    // START table-responsive
+    .table-responsive
+      table.table.table-bordered.table-hover
+        thead
+          tr
+            th(style="width: 3%") UID
+            th(style="width: 5%") Picture
+            th Username
+            th First Name
+            th Last Name
+            th Email
+            th(style="width: 5%") Profile
+            th Last Login
+            th.check-all(style="width: 5%")
+              .checkbox.c-checkbox(data-toggle="tooltip",data-title="Check All")
+                label
+                  input(type='checkbox')
+                  span.fa.fa-check
+        tbody
+          tr
+            td 1
+            td
+              .media
+                img.img-responsive.img-circle(src="app/img/user/01.jpg", alt="Image")
+            td @twitter
+            td Larry
+            td the Bird
+            td mail@example.com
+            td.text-center
+              .radial-bar.radial-bar-25.radial-bar-xs(data-label="25%")
+            td 1 week
+            td
+              .checkbox.c-checkbox
+                label
+                  input(type='checkbox')
+                  span.fa.fa-check
+          tr
+            td 2
+            td
+              .media
+                img.img-responsive.img-circle(src="app/img/user/02.jpg", alt="Image")
+            td @mdo
+            td Mark
+            td Otto
+            td mail@example.com
+            td.text-center
+              .radial-bar.radial-bar-50.radial-bar-xs(data-label="50%")
+            td 25 minutes
+            td
+              .checkbox.c-checkbox
+                label
+                  input(type='checkbox')
+                  span.fa.fa-check
+          tr
+            td 3
+            td
+              .media
+                img.img-responsive.img-circle(src="app/img/user/03.jpg", alt="Image")
+            td @fat
+            td Jacob
+            td Thornton
+            td mail@example.com
+            td.text-center
+              .radial-bar.radial-bar-80.radial-bar-xs(data-label="80%")
+            td 10 hours
+            td
+              .checkbox.c-checkbox
+                label
+                  input(type='checkbox')
+                  span.fa.fa-check
+    // END table-responsive
+    .panel-footer
+      .row
+        .col-lg-2
+          .input-group
+            input.input-sm.form-control(type='text', placeholder='Search')
+            span.input-group-btn
+              button.btn.btn-sm.btn-default(type='button') Search
+        .col-lg-8
+        .col-lg-2
+          .input-group.pull-right
+            select.input-sm.form-control
+              option(value='0') Bulk action
+              option(value='1') Delete
+              option(value='2') Clone
+              option(value='3') Export
+            span.input-group-btn
+              button.btn.btn-sm.btn-default Apply
+  // END panel
+  
+  // START panel
+  .panel.panel-default
+    .panel-heading
+      | Demo Table #2
+      a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right
+        em.fa.fa-times
+      a(href="#", data-perform="panel-collapse", data-toggle="tooltip", title="Collapse Panel").pull-right
+        em.fa.fa-minus
+    // START table-responsive
+    .table-responsive
+      table.table.table-striped.table-bordered.table-hover
+        thead
+          tr
+            th.check-all(style="width: 5%")
+              .checkbox.c-checkbox(data-toggle="tooltip",data-title="Check All")
+                label
+                  input(type='checkbox')
+                  span.fa.fa-check
+            th Description
+            th(style="width: 10%") Active
+        tbody
+          tr
+            td
+              .checkbox.c-checkbox
+                label
+                  input(type='checkbox')
+                  span.fa.fa-check
+            td
+              .media
+                  a.pull-left(href='#')
+                    img.media-object.img-responsive.img-circle(src="app/img/user/01.jpg")
+                  .media-body
+                    .pull-right.badge.baed-info admin
+                    h4.media-heading Holly Wallace
+                    p Username: holly123
+                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            td.text-center
+              label.switch
+                input(type='checkbox')
+                span
+          tr
+            td
+              .checkbox.c-checkbox
+                label
+                  input(type='checkbox')
+                  span.fa.fa-check
+            td
+              .media
+                  a.pull-left(href='#')
+                    img.media-object.img-responsive.img-circle(src="app/img/user/03.jpg")
+                  .media-body
+                    .pull-right.badge.baed-info writer
+                    h4.media-heading Alexis Foster
+                    p Username: ali89
+                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            td.text-center
+              label.switch
+                input(type='checkbox', checked)
+                span
+          tr
+            td
+              .checkbox.c-checkbox
+                label
+                  input(type='checkbox')
+                  span.fa.fa-check
+            td
+              .media
+                  a.pull-left(href='#')
+                    img.media-object.img-responsive.img-circle(src="app/img/user/05.jpg")
+                  .media-body
+                    .pull-right.badge.baed-info editor
+                    h4.media-heading Mario Miles
+                    p Username: mariomiles
+                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            td.text-center
+              label.switch
+                input(type='checkbox', checked)
+                span
+    // END table-responsive
+    .panel-footer
+      .row
+        .col-lg-2
+          .input-group.pull-right
+            select.input-sm.form-control
+              option(value='0') Bulk action
+              option(value='1') Delete
+              option(value='2') Clone
+              option(value='3') Export
+            span.input-group-btn
+              button.btn.btn-sm.btn-default Apply
+        .col-lg-8
+        .col-lg-2.text-right
+          ul.pagination.pagination-sm
+            li.active: a(href='#') 1
+            li: a(href='#') 2
+            li: a(href='#') 3
+            li: a(href='#') »
+  // END panel
+  
+  // START row
+  .row
+    .col-lg-6
+      // START panel
+      .panel.panel-default
+        .panel-heading
+          | Demo Table #3
+          a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right
+            em.fa.fa-times
+          a(href="#", data-perform="panel-collapse", data-toggle="tooltip", title="Collapse Panel").pull-right
+            em.fa.fa-minus
+        // START table-responsive
+        .table-responsive
+          table.table.table-striped.table-bordered.table-hover
+            thead
+              tr
+                th Task name
+                th Progress
+                th Deadline
+                th Action
+            tbody
+              tr
+                td Nunc luctus, quam non condimentum ornare
+                td 
+                  .progress.progress-striped.progress-xs
+                      .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%;')
+                        span.sr-only 80% Complete
+                td 05/05/2014
+                td.text-center
+                  .btn-group
+                      a.dropdown-toggle(href='#', data-toggle='dropdown')
+                        i.fa.fa-cog
+                      ul.dropdown-menu.pull-right.text-left
+                        li
+                          a(href='#') Action
+                        li
+                          a(href='#') Another action
+                        li
+                          a(href='#') Something else here
+                        li.divider
+                        li
+                          a(href='#') Separated link
+              tr
+                td Integer in convallis felis.
+                td 
+                  .progress.progress-striped.progress-xs
+                      .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%;')
+                        span.sr-only 20% Complete
+                td 15/05/2014
+                td.text-center
+                  .btn-group
+                      a.dropdown-toggle(href='#', data-toggle='dropdown')
+                        i.fa.fa-cog
+                      ul.dropdown-menu.pull-right.text-left
+                        li
+                          a(href='#') Action
+                        li
+                          a(href='#') Another action
+                        li
+                          a(href='#') Something else here
+                        li.divider
+                        li
+                          a(href='#') Separated link
+              tr
+                td Nullam sit amet magna vestibulum libero dapibus iaculis. 
+                td 
+                  .progress.progress-striped.progress-xs
+                      .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100', style='width: 50%;')
+                        span.sr-only 50% Complete
+                td 05/10/2014
+                td.text-center
+                  .btn-group
+                      a.dropdown-toggle(href='#', data-toggle='dropdown')
+                        i.fa.fa-cog
+                      ul.dropdown-menu.pull-right.text-left
+                        li
+                          a(href='#') Action
+                        li
+                          a(href='#') Another action
+                        li
+                          a(href='#') Something else here
+                        li.divider
+                        li
+                          a(href='#') Separated link
+        // END table-responsive
+      // END panel
+    .col-lg-6
+      // START panel
+      .panel.panel-default
+        .panel-heading
+          | Demo Table #4
+          a(href="#", data-perform="panel-dismiss", data-toggle="tooltip", title="Close Panel").pull-right
+            em.fa.fa-times
+          a(href="#", data-perform="panel-collapse", data-toggle="tooltip", title="Collapse Panel").pull-right
+            em.fa.fa-minus
+        // START table-responsive
+        .table-responsive
+          table.table.table-striped.table-bordered.table-hover
+            thead
+              tr
+                th Project
+                th Activity
+                th Completion
+                th Take action
+            tbody
+              tr
+                td Bootstrap 5.x
+                td 
+                  span.inlinesparkline(data-bar-color="danger") 1,4,4,7,5,9,10
+                td 
+                  .label.label-danger Canceled
+                td.text-center
+                  .btn-group
+                      a.btn.btn-default.btn-xs.dropdown-toggle(href='#', data-toggle='dropdown')
+                        em.fa.fa-angle-down
+                        |  Action
+                      ul.dropdown-menu.pull-right.text-left
+                        li
+                          a(href='#') Cancel
+                        li
+                          a(href='#') Delay
+                        li
+                          a(href='#') Re Plan 
+                        li
+                          a(href='#') Invoke meeting
+
+              tr
+                td Web Engine
+                td 
+                  span.inlinesparkline(data-bar-color="success") 1,4,4,10,5,9,2
+                td
+                  .label.label-success Complete
+                td.text-center
+                  .btn-group
+                      a.btn.btn-default.btn-xs.dropdown-toggle(href='#', data-toggle='dropdown')
+                        em.fa.fa-angle-down
+                        |  Action
+                      ul.dropdown-menu.pull-right.text-left
+                        li
+                          a(href='#') Cancel
+                        li
+                          a(href='#') Delay
+                        li
+                          a(href='#') Re Plan 
+                        li
+                          a(href='#') Invoke meeting
+
+              tr
+                td Nullam sit amet
+                td 
+                  span.inlinesparkline(data-bar-color="warning") 1,4,4,7,5,9,4
+                td
+                  .label.label-warning Delayed
+                td.text-center
+                  .btn-group
+                      a.btn.btn-default.btn-xs.dropdown-toggle(href='#', data-toggle='dropdown')
+                        em.fa.fa-angle-down
+                        |  Action
+                      ul.dropdown-menu.pull-right.text-left
+                        li
+                          a(href='#') Cancel
+                        li
+                          a(href='#') Delay
+                        li
+                          a(href='#') Re Plan 
+                        li
+                          a(href='#') Invoke meeting
+        // END table-responsive
+      // END panel
+  // END row

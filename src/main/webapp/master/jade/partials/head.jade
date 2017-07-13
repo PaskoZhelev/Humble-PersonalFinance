@@ -1,0 +1,59 @@
+// Meta
+meta(charset='utf-8')
+meta(http-equiv='X-UA-Compatible', content='IE=edge')
+meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0')
+meta(name='description', content='')
+meta(name='keywords', content='')
+meta(name='author', content='')
+
+title 47Admin - Bootstrap Admin Skin
+
+// HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries 
+<!--[if lt IE 9]>
+script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+<![endif]-->
+
+// Bootstrap CSS
+link(rel='stylesheet', href='app/css/bootstrap.css')
+// Vendor CSS
+link(rel='stylesheet', href='vendor/fontawesome/css/font-awesome.min.css')
+link(rel='stylesheet', href='vendor/animo/animate+animo.css')
+link(rel='stylesheet', href='vendor/csspinner/csspinner.min.css')
+
+// START Page Custom CSS
+
+//- jQuery UI for Portlets and Calendar
+if (menu['Elements']['S']['Portlets']['active'] || menu['Elements']['S']['Calendar']['active'])
+  // jQuery UI
+  link(rel='stylesheet', href='vendor/jqueryui/css/ui-lightness/jquery-ui-1.10.4.custom.min.css')
+
+if (menu['Elements']['S']['Calendar']['active'])
+  // FullCalendar
+  link(rel='stylesheet', href='vendor/fullcalendar/fullcalendar.css')
+  link(rel='stylesheet', href='vendor/fullcalendar/fullcalendar.print.css', type="text/css", media='print')
+
+if (menu['Forms']['S']['Extended']['active'])
+  link(rel='stylesheet', href='vendor/slider/css/slider.css')
+  link(rel='stylesheet', href='vendor/chosen/chosen.min.css')
+  link(rel='stylesheet', href='vendor/datetimepicker/css/bootstrap-datetimepicker.min.css')
+  // Codemirror 
+  link(rel='stylesheet', href='vendor/codemirror/lib/codemirror.css')
+  // Bootstrap tags
+  link(rel='stylesheet', href='vendor/tagsinput/bootstrap-tagsinput.css')
+
+if (menu['Tables']['S']['Data Table']['active'])
+  // Data Table styles
+  //-link(rel='stylesheet', href='vendor/datatable/media/css/jquery.dataTables.min.css')
+  link(rel='stylesheet', href='vendor/datatable/extensions/datatable-bootstrap/css/dataTables.bootstrap.css')
+  link(rel='stylesheet', href='vendor/datatable/extensions/ColVis/css/dataTables.colVis.css')
+
+// END Page Custom CSS
+
+// App CSS
+link(rel='stylesheet', href='app/css/app.css')
+
+// Modernizr JS Script
+script(src='vendor/modernizr/modernizr.js', type='application/javascript')
+// FastClick for mobiles
+script(src='vendor/fastclick/fastclick.js', type='application/javascript')
