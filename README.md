@@ -1,5 +1,7 @@
 # Humble-PersonalFinance
-Humble - Personal Finance application used as a final project for Harvard's CS50
+Humble - Personal Finance application used as a final project for Harvard's CS50.
+
+Java, Servlets, JSP, Bootstrap, MySQL are used for the project.
 
 Screenshots from the application:
 ![alt text](https://rawgit.com/PaskoZhelev/Humble-PersonalFinance/master/screenshots/dashboard.jpg)
