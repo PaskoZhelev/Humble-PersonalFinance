@@ -1,5 +1,5 @@
 # Humble-PersonalFinance
-Humble - Personal Finance application used as a final project for Harvard's CS50.
+Humble - Personal Finance application used as a final project for Harvard's CS50 course.
 
 Java, Servlets, JSP, Bootstrap, MySQL are used for the project.
 
